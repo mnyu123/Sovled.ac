@@ -6,17 +6,50 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        
-        // 2420 사파리월드
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        //n과 m 입력받기
-        long n = Long.parseLong(st.nextToken());
-        long m = Long.parseLong(st.nextToken());
-        System.out.print(Math.abs(n-m));  //n - m을 절대값을 한 값을 출력하면 된다
-        
-        
+    public static void main(String[] args) {
+
+        // 2744번 대소문자 바꾸기
+        Scanner scanner = new Scanner(System.in);
+
+        String a = scanner.nextLine();
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < a.length(); i++) {
+
+            char c = a.charAt(i); // 맨 앞글자 하나씩
+
+            if (Character.isUpperCase(c)) { // 대문자면
+
+                result.append(Character.toLowerCase(c)); // 내부함수로 소문자
+
+            } else if (Character.isLowerCase(c)) { // 소문자면
+
+                result.append(Character.toUpperCase(c)); // 내부함수로 대문자
+
+            } else {
+
+                result.append(c); // 숫자나 특수문자 등은 그대로 추가
+            }
+
+
+        }
+
+        System.out.println(result.toString());
+        scanner.close();
+
+        System.out.println();
+
+
+//        // 2420 사파리월드
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringTokenizer st = new StringTokenizer(br.readLine());
+//        //n과 m 입력받기
+//        long n = Long.parseLong(st.nextToken());
+//        long m = Long.parseLong(st.nextToken());
+//        System.out.print(Math.abs(n-m));  //n - m을 절대값을 한 값을 출력하면 된다
+
+
 //        // 1271번 엄청난 부자2
 //        Scanner scanner = new Scanner(System.in);
 //
@@ -48,8 +81,6 @@ public class Main {
 //        System.out.println("이게 정답일듯: " + sovle);
 
 
-
-
 //        Scanner scanner = new Scanner(System.in);
 //
 //        BigInteger a =  scanner.nextBigInteger();
@@ -58,9 +89,6 @@ public class Main {
 //        System.out.println(a.add(b));
 //        System.out.println(a.subtract(b));
 //        System.out.println(a.multiply(b));
-
-        
-
 
 
     }
