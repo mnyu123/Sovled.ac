@@ -8,37 +8,63 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) {
 
-        // 2744번 대소문자 바꾸기
+        // 3003번 킹,퀸,룩,비숍,나이트,폰
         Scanner scanner = new Scanner(System.in);
 
-        String a = scanner.nextLine();
 
-        StringBuilder result = new StringBuilder();
+        int king = 1;
+        int queen = 1;
+        int rook = 2;
+        int bishop = 2;
+        int knight = 2;
+        int pawn = 8;
 
-        for (int i = 0; i < a.length(); i++) {
+        king = king - scanner.nextInt();
+        queen = queen - scanner.nextInt();
+        rook = rook - scanner.nextInt();
+        bishop = bishop - scanner.nextInt();
+        knight = knight - scanner.nextInt();
+        pawn = pawn - scanner.nextInt();
 
-            char c = a.charAt(i); // 맨 앞글자 하나씩
-
-            if (Character.isUpperCase(c)) { // 대문자면
-
-                result.append(Character.toLowerCase(c)); // 내부함수로 소문자
-
-            } else if (Character.isLowerCase(c)) { // 소문자면
-
-                result.append(Character.toUpperCase(c)); // 내부함수로 대문자
-
-            } else {
-
-                result.append(c); // 숫자나 특수문자 등은 그대로 추가
-            }
+        System.out.print(king + " ");
+        System.out.print(queen + " ");
+        System.out.print(rook + " ");
+        System.out.print(bishop + " ");
+        System.out.print(knight + " ");
+        System.out.print(pawn);
 
 
-        }
-
-        System.out.println(result.toString());
-        scanner.close();
-
-        System.out.println();
+//        // 2744번 대소문자 바꾸기
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String a = scanner.nextLine();
+//
+//        StringBuilder result = new StringBuilder();
+//
+//        for (int i = 0; i < a.length(); i++) {
+//
+//            char c = a.charAt(i); // 맨 앞글자 하나씩
+//
+//            if (Character.isUpperCase(c)) { // 대문자면
+//
+//                result.append(Character.toLowerCase(c)); // 내부함수로 소문자
+//
+//            } else if (Character.isLowerCase(c)) { // 소문자면
+//
+//                result.append(Character.toUpperCase(c)); // 내부함수로 대문자
+//
+//            } else {
+//
+//                result.append(c); // 숫자나 특수문자 등은 그대로 추가
+//            }
+//
+//
+//        }
+//
+//        System.out.println(result.toString());
+//        scanner.close();
+//
+//        System.out.println();
 
 
 //        // 2420 사파리월드
