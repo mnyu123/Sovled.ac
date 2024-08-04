@@ -1,37 +1,49 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        // 3003번 킹,퀸,룩,비숍,나이트,폰
-        Scanner scanner = new Scanner(System.in);
+        // 3773 shares
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        while (true) {
+            String cur = br.readLine();
+            if (cur == null) break;
+            StringTokenizer st = new StringTokenizer(cur);
+            int n = Integer.parseInt(st.nextToken());
+            int s = Integer.parseInt(st.nextToken());
+            sb.append(s / (n + 1)).append('\n');
+        }
+        System.out.println(sb);
 
 
-        int king = 1;
-        int queen = 1;
-        int rook = 2;
-        int bishop = 2;
-        int knight = 2;
-        int pawn = 8;
-
-        king = king - scanner.nextInt();
-        queen = queen - scanner.nextInt();
-        rook = rook - scanner.nextInt();
-        bishop = bishop - scanner.nextInt();
-        knight = knight - scanner.nextInt();
-        pawn = pawn - scanner.nextInt();
-
-        System.out.print(king + " ");
-        System.out.print(queen + " ");
-        System.out.print(rook + " ");
-        System.out.print(bishop + " ");
-        System.out.print(knight + " ");
-        System.out.print(pawn);
+//        // 3003번 킹,퀸,룩,비숍,나이트,폰
+//        Scanner scanner = new Scanner(System.in);
+//
+//
+//        int king = 1;
+//        int queen = 1;
+//        int rook = 2;
+//        int bishop = 2;
+//        int knight = 2;
+//        int pawn = 8;
+//
+//        king = king - scanner.nextInt();
+//        queen = queen - scanner.nextInt();
+//        rook = rook - scanner.nextInt();
+//        bishop = bishop - scanner.nextInt();
+//        knight = knight - scanner.nextInt();
+//        pawn = pawn - scanner.nextInt();
+//
+//        System.out.print(king + " ");
+//        System.out.print(queen + " ");
+//        System.out.print(rook + " ");
+//        System.out.print(bishop + " ");
+//        System.out.print(knight + " ");
+//        System.out.print(pawn);
 
 
 //        // 2744번 대소문자 바꾸기
