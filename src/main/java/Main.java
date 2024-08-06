@@ -1,23 +1,43 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        // 3773 shares
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+        // 4101 크냐?
+        Scanner scanner = new Scanner(System.in);
+
+
         while (true) {
-            String cur = br.readLine();
-            if (cur == null) break;
-            StringTokenizer st = new StringTokenizer(cur);
-            int n = Integer.parseInt(st.nextToken());
-            int s = Integer.parseInt(st.nextToken());
-            sb.append(s / (n + 1)).append('\n');
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+
+            if (a == 0 && b == 0) {
+                break;
+            }
+            if (a > b) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
         }
-        System.out.println(sb);
+
+
+//        // 3773 shares
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringBuilder sb = new StringBuilder();
+//        while (true) {
+//            String cur = br.readLine();
+//            if (cur == null) break;
+//            StringTokenizer st = new StringTokenizer(cur);
+//            int n = Integer.parseInt(st.nextToken());
+//            int s = Integer.parseInt(st.nextToken());
+//            sb.append(s / (n + 1)).append('\n');
+//        }
+//        System.out.println(sb);
 
 
 //        // 3003번 킹,퀸,룩,비숍,나이트,폰
