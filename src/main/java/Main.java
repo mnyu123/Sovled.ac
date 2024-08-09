@@ -7,36 +7,43 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) {
 
-        // 4999 아!
-        Scanner sc = new Scanner(System.in);
 
-        String a = sc.next();
-        String b = sc.next();
-
-        if (a.length() >= b.length()) {
-            System.out.println("go");
-        }else {
-            System.out.println("no");
-        }
+        // 5337번
+        System.out.println(".  .   .");
+        System.out.println("|  | _ | _. _ ._ _  _");
+        System.out.println("|/\\|(/.|(_.(_)[ | )(/.");
 
 
-        // 4101 크냐?
-        Scanner scanner = new Scanner(System.in);
-
-
-        while (true) {
-            int a = scanner.nextInt();
-            int b = scanner.nextInt();
-
-            if (a == 0 && b == 0) {
-                break;
-            }
-            if (a > b) {
-                System.out.println("Yes");
-            } else {
-                System.out.println("No");
-            }
-        }
+//        // 4999 아!
+//        Scanner sc = new Scanner(System.in);
+//
+//        String a = sc.next();
+//        String b = sc.next();
+//
+//        if (a.length() >= b.length()) {
+//            System.out.println("go");
+//        }else {
+//            System.out.println("no");
+//        }
+//
+//
+//        // 4101 크냐?
+//        Scanner scanner = new Scanner(System.in);
+//
+//
+//        while (true) {
+//            int a = scanner.nextInt();
+//            int b = scanner.nextInt();
+//
+//            if (a == 0 && b == 0) {
+//                break;
+//            }
+//            if (a > b) {
+//                System.out.println("Yes");
+//            } else {
+//                System.out.println("No");
+//            }
+//        }
 
 
 //        // 3773 shares
