@@ -7,11 +7,18 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) {
 
+        // 5338번 마이크로소프트 로고
+        System.out.println("       _.-;;-._ ");
+        System.out.println("'-..-'|   ||   |");
+        System.out.println("'-..-'|_.-;;-._|");
+        System.out.println("'-..-'|   ||   |");
+        System.out.println("'-..-'|_.-''-._|");
 
-        // 5337번
-        System.out.println(".  .   .");
-        System.out.println("|  | _ | _. _ ._ _  _");
-        System.out.println("|/\\|(/.|(_.(_)[ | )(/.");
+
+//        // 5337번
+//        System.out.println(".  .   .");
+//        System.out.println("|  | _ | _. _ ._ _  _");
+//        System.out.println("|/\\|(/.|(_.(_)[ | )(/.");
 
 
 //        // 4999 아!
