@@ -7,17 +7,35 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) {
 
-        // 5339번 콜센터
-        System.out.println("     /~\\\n" +
-                "    ( oo|\n" +
-                "    _\\=/_\n" +
-                "   /  _  \\\n" +
-                "  //|/.\\|\\\\\n" +
-                " ||  \\ /  ||\n" +
-                "============\n" +
-                "|          |\n" +
-                "|          |\n" +
-                "|          |");
+        // 5341번 Pyramids
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            int height = sc.nextInt();
+            if (height == 0) {
+                break;
+            }
+            System.out.println(pyramids(height));
+        }
+
+
+        // 1 = 1
+        // 2 = 3
+        // 3 = 6
+        // 4 = 10
+
+//        // 5339번 콜센터
+//        System.out.println("     /~\\\n" +
+//                "    ( oo|\n" +
+//                "    _\\=/_\n" +
+//                "   /  _  \\\n" +
+//                "  //|/.\\|\\\\\n" +
+//                " ||  \\ /  ||\n" +
+//                "============\n" +
+//                "|          |\n" +
+//                "|          |\n" +
+//                "|          |");
 
 
 //        // 5338번 마이크로소프트 로고
@@ -189,5 +207,15 @@ public class Main {
 //        System.out.println(a.multiply(b));
 
 
+    }
+
+    private static int pyramids(int height) {
+        int count = 0;
+
+        for (int i = 0; i <= height; i++) {
+            count += i;
+        }
+
+        return count;
     }
 }
