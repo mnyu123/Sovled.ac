@@ -7,17 +7,30 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) {
 
-        // 5341번 Pyramids
-
+        // 5522번 카드게임
         Scanner sc = new Scanner(System.in);
 
-        while (true) {
-            int height = sc.nextInt();
-            if (height == 0) {
-                break;
-            }
-            System.out.println(pyramids(height));
+        int count = 0;
+
+        for(int i=0;i<5;i++){
+            int a = sc.nextInt();
+
+            count += a;
         }
+
+        System.out.println(count);
+
+//        // 5341번 Pyramids
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        while (true) {
+//            int height = sc.nextInt();
+//            if (height == 0) {
+//                break;
+//            }
+//            System.out.println(pyramids(height));
+//        }
 
 
         // 1 = 1
@@ -209,13 +222,13 @@ public class Main {
 
     }
 
-    private static int pyramids(int height) {
-        int count = 0;
-
-        for (int i = 0; i <= height; i++) {
-            count += i;
-        }
-
-        return count;
-    }
+//    private static int pyramids(int height) {
+//        int count = 0;
+//
+//        for (int i = 0; i <= height; i++) {
+//            count += i;
+//        }
+//
+//        return count;
+//    }
 }
