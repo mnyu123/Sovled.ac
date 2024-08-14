@@ -7,18 +7,53 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) {
 
-        // 5522번 카드게임
+
+        // 6840번 Who is the middle?
         Scanner sc = new Scanner(System.in);
+        int[] arrays = new int[3];
 
-        int count = 0;
-
-        for(int i=0;i<5;i++){
-            int a = sc.nextInt();
-
-            count += a;
+        for (int i = 0; i < 3; i++) {
+            arrays[i] = sc.nextInt(); // 배열에 값을 입력
         }
 
-        System.out.println(count);
+        System.out.println(com(arrays));
+    }
+
+    public static int com(int[] arrays) {
+        if ((arrays[0] > arrays[1] && arrays[0] < arrays[2]) || (arrays[0] < arrays[1] && arrays[0] > arrays[2])) {
+            return arrays[0];
+        } else if ((arrays[1] > arrays[0] && arrays[1] < arrays[2]) || (arrays[1] < arrays[0] && arrays[1] > arrays[2])) {
+            return arrays[1];
+        } else {
+            return arrays[2];
+        }
+    }
+
+
+//    private static int pyramids(int height) {
+//        int count = 0;
+//
+//        for (int i = 0; i <= height; i++) {
+//            count += i;
+//        }
+//
+//        return count;
+//    }
+}
+
+
+// 5522번 카드게임
+//        Scanner sc = new Scanner(System.in);
+//
+//        int count = 0;
+//
+//        for(int i=0;i<5;i++){
+//            int a = sc.nextInt();
+//
+//            count += a;
+//        }
+//
+//        System.out.println(count);
 
 //        // 5341번 Pyramids
 //
@@ -33,10 +68,10 @@ public class Main {
 //        }
 
 
-        // 1 = 1
-        // 2 = 3
-        // 3 = 6
-        // 4 = 10
+// 1 = 1
+// 2 = 3
+// 3 = 6
+// 4 = 10
 
 //        // 5339번 콜센터
 //        System.out.println("     /~\\\n" +
@@ -188,7 +223,7 @@ public class Main {
 //        System.out.println(AllMoney.divide(life));
 //        System.out.println(AllMoney.remainder(life));
 
-        // 2475 검증수
+// 2475 검증수
 //        Scanner scanner = new Scanner(System.in);
 //
 //        int total = 0;
@@ -218,17 +253,3 @@ public class Main {
 //        System.out.println(a.add(b));
 //        System.out.println(a.subtract(b));
 //        System.out.println(a.multiply(b));
-
-
-    }
-
-//    private static int pyramids(int height) {
-//        int count = 0;
-//
-//        for (int i = 0; i <= height; i++) {
-//            count += i;
-//        }
-//
-//        return count;
-//    }
-}
