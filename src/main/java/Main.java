@@ -1,34 +1,48 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 import java.util.StringTokenizer;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
-
-
-        // 6840번 Who is the middle?
+        // 7891번 Can you add this?
         Scanner sc = new Scanner(System.in);
-        int[] arrays = new int[3];
+        int number = sc.nextInt();
 
-        for (int i = 0; i < 3; i++) {
-            arrays[i] = sc.nextInt(); // 배열에 값을 입력
+
+        for (int i = 0; i < number; i++) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            System.out.println(x + y);
         }
 
-        System.out.println(com(arrays));
-    }
 
-    public static int com(int[] arrays) {
-        if ((arrays[0] > arrays[1] && arrays[0] < arrays[2]) || (arrays[0] < arrays[1] && arrays[0] > arrays[2])) {
-            return arrays[0];
-        } else if ((arrays[1] > arrays[0] && arrays[1] < arrays[2]) || (arrays[1] < arrays[0] && arrays[1] > arrays[2])) {
-            return arrays[1];
-        } else {
-            return arrays[2];
-        }
     }
+}
 
+
+// 6840번 Who is the middle?
+//        Scanner sc = new Scanner(System.in);
+//        int[] arrays = new int[3];
+//
+//        for (int i = 0; i < 3; i++) {
+//            arrays[i] = sc.nextInt(); // 배열에 값을 입력
+//        }
+//
+//        System.out.println(com(arrays));
+//    }
+//
+//    public static int com(int[] arrays) {
+//        if ((arrays[0] > arrays[1] && arrays[0] < arrays[2]) || (arrays[0] < arrays[1] && arrays[0] > arrays[2])) {
+//            return arrays[0];
+//        } else if ((arrays[1] > arrays[0] && arrays[1] < arrays[2]) || (arrays[1] < arrays[0] && arrays[1] > arrays[2])) {
+//            return arrays[1];
+//        } else {
+//            return arrays[2];
+//        }
+//    }
 
 //    private static int pyramids(int height) {
 //        int count = 0;
