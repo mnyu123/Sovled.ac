@@ -7,22 +7,29 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // 7891번 Can you add this?
+        //8730번 Plane
         Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
+        int front1 = sc.nextInt();
+        int front2 = sc.nextInt();
+        int back1 = sc.nextInt();
+        int back2 = sc.nextInt();
 
-
-        for (int i = 0; i < number; i++) {
-            int x = sc.nextInt();
-            int y = sc.nextInt();
-            System.out.println(x + y);
-        }
+        System.out.println((front1*front2)+(back1*back2));
 
 
     }
 }
 
-
+// 7891번 Can you add this?
+//        Scanner sc = new Scanner(System.in);
+//        int number = sc.nextInt();
+//
+//
+//        for (int i = 0; i < number; i++) {
+//            int x = sc.nextInt();
+//            int y = sc.nextInt();
+//            System.out.println(x + y);
+//        }
 // 6840번 Who is the middle?
 //        Scanner sc = new Scanner(System.in);
 //        int[] arrays = new int[3];
@@ -53,7 +60,7 @@ public class Main {
 //
 //        return count;
 //    }
-}
+
 
 
 // 5522번 카드게임
