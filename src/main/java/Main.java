@@ -7,19 +7,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //8730번 Plane
+
+        // 8393번
         Scanner sc = new Scanner(System.in);
-        int front1 = sc.nextInt();
-        int front2 = sc.nextInt();
-        int back1 = sc.nextInt();
-        int back2 = sc.nextInt();
+        int input = sc.nextInt();
+        int count = 0;
 
-        System.out.println((front1*front2)+(back1*back2));
-
-
+        for (int i = 1; i <= input; i++) {
+            count += i;
+        }
+        System.out.println(count);
     }
 }
 
+//8730번 Plane
+//        Scanner sc = new Scanner(System.in);
+//        int front1 = sc.nextInt();
+//        int front2 = sc.nextInt();
+//        int back1 = sc.nextInt();
+//        int back2 = sc.nextInt();
+//
+//        System.out.println((front1*front2)+(back1*back2));
 // 7891번 Can you add this?
 //        Scanner sc = new Scanner(System.in);
 //        int number = sc.nextInt();
@@ -60,7 +68,6 @@ public class Main {
 //
 //        return count;
 //    }
-
 
 
 // 5522번 카드게임
