@@ -1,25 +1,40 @@
+import java.util.StringTokenizer;
+import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-import java.util.Scanner;
-
+import java.math.BigInteger;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 
-        // 8393번
-        Scanner sc = new Scanner(System.in);
-        int input = sc.nextInt();
-        int count = 0;
+        // 8437 Julka
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BigInteger total = new BigInteger(bf.readLine());
+        BigInteger diff = new BigInteger(bf.readLine());
+        BigInteger two = new BigInteger("2");
+        //(1)
 
-        for (int i = 1; i <= input; i++) {
-            count += i;
-        }
-        System.out.println(count);
+        BigInteger klaudia = (total.subtract(diff)).divide(two).add(diff);
+        //(2)
+        BigInteger natalia = (total.subtract(diff)).divide(two);
+        //(3)
+
+        System.out.println(klaudia);
+        System.out.println(natalia);
+
     }
 }
 
+//// 8393번
+//Scanner sc = new Scanner(System.in);
+//int input = sc.nextInt();
+//int count = 0;
+//
+//        for (int i = 1; i <= input; i++) {
+//count += i;
+//        }
+//                System.out.println(count);
 //8730번 Plane
 //        Scanner sc = new Scanner(System.in);
 //        int front1 = sc.nextInt();
