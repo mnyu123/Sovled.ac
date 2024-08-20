@@ -1,25 +1,29 @@
 import java.util.StringTokenizer;
-import java.util.Scanner;
 import java.math.BigInteger;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        // 8545번
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String input = bf.readLine(); // abc
-
-        for (int i = input.length() - 1; i >= 0; i--) {
-            System.out.print(input.charAt(i));
-        }
+        // 8871번 Zadanie próbne 2
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.printf("%d %d", (n + 1) * 2, (n + 1) * 3);
 
     }
 }
 
+//// 8545번 Zadanie próbne 1
+//BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+//String input = bf.readLine(); // abc
+//
+//        for (int i = input.length() - 1; i >= 0; i--) {
+//        System.out.print(input.charAt(i));
+//        }
 //// 8437 Julka
 //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 //BigInteger total = new BigInteger(bf.readLine());
