@@ -1,21 +1,36 @@
 import java.util.StringTokenizer;
 import java.math.BigInteger;
+import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        // 9086번 문자열
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(bf.readLine());
 
-        // 8871번 Zadanie próbne 2
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        System.out.printf("%d %d", (n + 1) * 2, (n + 1) * 3);
+        String name[] = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            String str = bf.readLine();
+            name[i] = str.substring(0, 1) + str.substring(str.length() - 1, str.length());
+        }
+        bf.close();
+        for (int i = 0; i < n; i++) {
+            System.out.println(name[i]);
+        }
 
     }
 }
+
+
+
+// 8871번 Zadanie próbne 2
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//        System.out.printf("%d %d", (n + 1) * 2, (n + 1) * 3);
 
 //// 8545번 Zadanie próbne 1
 //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
