@@ -7,26 +7,36 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // 9086번 문자열
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bf.readLine());
-
-        String name[] = new String[n];
-
-        for (int i = 0; i < n; i++) {
-            String str = bf.readLine();
-            name[i] = str.substring(0, 1) + str.substring(str.length() - 1, str.length());
-        }
-        bf.close();
-        for (int i = 0; i < n; i++) {
-            System.out.println(name[i]);
-        }
-
+//
+        // 9653번 스타워즈 로고
+        System.out.println("    8888888888  888    88888\n" +
+                "   88     88   88 88   88  88\n" +
+                "    8888  88  88   88  88888\n" +
+                "       88 88 888888888 88   88\n" +
+                "88888888  88 88     88 88    888888\n" +
+                "\n" +
+                "88  88  88   888    88888    888888\n" +
+                "88  88  88  88 88   88  88  88\n" +
+                "88 8888 88 88   88  88888    8888\n" +
+                " 888  888 888888888 88  88      88\n" +
+                "  88  88  88     88 88   88888888");
     }
 }
 
 
-
+// 9086번 문자열
+//        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+//        int n = Integer.parseInt(bf.readLine());
+//
+//        String name[] = new String[n];
+//
+//        for (int i = 0; i < n; i++) {
+//            String str = bf.readLine();
+//            name[i] = str.substring(0, 1) + str.substring(str.length() - 1, str.length());
+//        }
+//        bf.close();
+//        for (int i = 0; i < n; i++) {
+//            System.out.println(name[i]);
 // 8871번 Zadanie próbne 2
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();
