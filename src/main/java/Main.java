@@ -6,33 +6,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-//
-        // 9653번 스타워즈 로고
-        System.out.println("    8888888888  888    88888\n" +
-                "   88     88   88 88   88  88\n" +
-                "    8888  88  88   88  88888\n" +
-                "       88 88 888888888 88   88\n" +
-                "88888888  88 88     88 88    888888\n" +
-                "\n" +
-                "88  88  88   888    88888    888888\n" +
-                "88  88  88  88 88   88  88  88\n" +
-                "88 8888 88 88   88  88888    8888\n" +
-                " 888  888 888888888 88  88      88\n" +
-                "  88  88  88     88 88   88888888");
+    public static void main(String[] args) {
+        // 여기에 작성
     }
-}
 
+    // 여기에 작성
+    // String str = bf.readLine();
+//          name[i] = str.substring(0, 1) + str.substring(str.length() - 1, str.length());
 
-// 9086번 문자열
 //        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 //        int n = Integer.parseInt(bf.readLine());
 //
 //        String name[] = new String[n];
 //
 //        for (int i = 0; i < n; i++) {
-//            String str = bf.readLine();
-//            name[i] = str.substring(0, 1) + str.substring(str.length() - 1, str.length());
+    // 여기에 작성
 //        }
 //        bf.close();
 //        for (int i = 0; i < n; i++) {
@@ -333,3 +321,107 @@ public class Main {
 //        System.out.println(a.add(b));
 //        System.out.println(a.subtract(b));
 //        System.out.println(a.multiply(b));
+
+
+
+
+
+
+
+
+
+    /*
+     */
+/*
+    //// 여기에 작성
+    //System.out.println("dasdasd");
+    //}
+    //// 9086번 문자열
+    ///*
+    //*/
+///*
+//*/
+///*
+//*/
+///*
+//*/
+///*
+//*/
+///*
+//*/
+///*
+//*/
+///*
+//*/
+////// 여기에 작성
+////System.out.println("asdasd");
+////}}
+//////// 여기에 작성
+//////System.out.println("고등학교");
+////////// 여기에 작성
+////////System.out.println("SAdasda");
+////////}}
+//////////// 여기에 작성
+//////////System.out.println("괄호삭제 버그 수정?");
+//////////}
+////////////// 여기에 작성
+////////////System.out.println("테스트용");
+////////////}
+//////////////// 9653번 스타워즈 로고
+//////////////System.out.println("    8888888888  888    88888\n" +
+//////////////"   88     88   88 88   88  88\n" +
+//////////////"    8888  88  88   88  88888\n" +
+//////////////"       88 88 888888888 88   88\n" +
+//////////////"88888888  88 88     88 88    888888\n" +
+//////////////"\n" +
+//////////////"88  88  88   888    88888    888888\n" +
+//////////////"88  88  88  88 88   88  88  88\n" +
+//////////////"88 8888 88 88   88  88888    8888\n" +
+//////////////" 888  888 888888888 88  88      88\n" +
+//////////////"  88  88  88     88 88   88888888");
+//////////////}
+//////////// 여기에 작성
+//////////System.out.println("다시 테스트");
+//////////}}
+//////////// 여기에 작성
+//////////System.out.println("asdasdadasadas");
+//////////}}
+
+
+/*
+}
+
+/*
+    //public static void main(String[] args) {
+        // 여기에 작성
+    ////public static void main(String[] args) {
+        // 여기에 작성
+}
+
+/*
+    //System.out.println("asdas");
+    //System.out.println("sdadasad");
+    //// 여기에 작성
+    //// 여기에 작성
+    ///*
+    ////// 여기에 작성
+    ////System.out.println("테스트를해요");
+    ////}
+    ////// 여기에 작성
+    ////// 여기에 작성
+    /////*
+    //////System.out.println("dasdsa");
+*/
+
+    /*
+
+     */
+}
+
+/*
+    //// 여기에 작성
+    //System.out.println("?");
+    //// 여기에 작성
+    //// 여기에 작성
+    ////}
+*/
