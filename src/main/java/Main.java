@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) {
         // 여기에 작성
+        System.out.println("커밋 테스트");
     }
 
     // 여기에 작성
