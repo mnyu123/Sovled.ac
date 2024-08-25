@@ -8,20 +8,11 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) {
         // 여기에 작성
-        // 10170번 NFC West vs North
-        System.out.println("NFC West       W   L  T");
-        System.out.println("-----------------------");
-        System.out.println("Seattle        13  3  0");
-        System.out.println("San Francisco  12  4  0");
-        System.out.println("Arizona        10  6  0");
-        System.out.println("St. Louis      7   9  0");
-        System.out.println(); // 공백
-        System.out.println("NFC North      W   L  T");
-        System.out.println("-----------------------");
-        System.out.println("Green Bay      8   7  1");
-        System.out.println("Chicago        8   8  0");
-        System.out.println("Detroit        7   9  0");
-        System.out.println("Minnesota      5  10  1");
+        // 10189 hook
+        System.out.println("#  # #### #### #  #");
+        System.out.println("#### #  # #  # # #");
+        System.out.println("#### #  # #  # # #");
+        System.out.println("#  # #### #### #  #");
     }
 }
 
@@ -412,13 +403,6 @@ public class Main {
         // 여기에 작성
     ////public static void main(String[] args) {
         // 여기에 작성
-}
-
-/*
-    //// 여기에 작성
-    //System.out.println("?");
-    //// 여기에 작성
-    //// 여기에 작성
     ////}
 */
 
@@ -458,3 +442,29 @@ public class Main {
     ///*
     //*/
 
+
+/*
+    //// 여기에 작성
+    //// 10170번 NFC West vs North
+    //System.out.println("NFC West       W   L  T");
+    //System.out.println("-----------------------");
+    //System.out.println("Seattle        13  3  0");
+    //System.out.println("San Francisco  12  4  0");
+    //System.out.println("Arizona        10  6  0");
+    //System.out.println("St. Louis      7   9  0");
+    //System.out.println(); // 공백
+    //System.out.println("NFC North      W   L  T");
+    //System.out.println("-----------------------");
+    //System.out.println("Green Bay      8   7  1");
+    //System.out.println("Chicago        8   8  0");
+    //System.out.println("Detroit        7   9  0");
+    //System.out.println("Minnesota      5  10  1");
+    //// 여기에 작성
+    //// 여기에 작성
+    //}
+    ///*
+    ////// 여기에 작성
+    ////System.out.println("?");
+    ////// 여기에 작성
+    ////// 여기에 작성
+*/
