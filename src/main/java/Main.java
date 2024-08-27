@@ -4,15 +4,17 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Main {
     public static void main(String[] args) {
         // 여기에 작성
-        // 10189 hook
-        System.out.println("#  # #### #### #  #");
-        System.out.println("#### #  # #  # # #");
-        System.out.println("#### #  # #  # # #");
-        System.out.println("#  # #### #### #  #");
+        //10669 오늘 날짜
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar c1 = Calendar.getInstance();
+        String StringToday = sdf.format(c1.getTime());
+        System.out.println(StringToday);
     }
 }
 
@@ -403,36 +405,6 @@ public class Main {
         // 여기에 작성
     ////public static void main(String[] args) {
         // 여기에 작성
-    ////}
-*/
-
-/*
-    //// 여기에 작성
-    //System.out.println("커밋 테스트아젠장");
-    //// 여기에 작성
-    //// 여기에 작성
-    //}
-    ///*
-    ////System.out.println("asdas");
-    ////System.out.println("sdadasad");
-    ////// 여기에 작성
-    ////// 여기에 작성
-    /////*
-    //////// 여기에 작성
-    //////System.out.println("테스트를해요");
-*/
-
-/*
-    //// 여기에 작성
-    //// 9654번 나부 함대 데이터
-    //System.out.println("SHIP NAME      CLASS          DEPLOYMENT IN SERVICE");
-    //System.out.println("N2 Bomber      Heavy Fighter  Limited    21        ");
-    //System.out.println("J-Type 327     Light Combat   Unlimited  1         ");
-    //System.out.println("NX Cruiser     Medium Fighter Limited    18        ");
-    //System.out.println("N1 Starfighter Medium Fighter Unlimited  25        ");
-    //System.out.println("Royal Cruiser  Light Combat   Limited    4         ");
-    //// 여기에 작성
-    //// 여기에 작성
     //////}
     //////// 여기에 작성
     //////// 여기에 작성
@@ -468,3 +440,48 @@ public class Main {
     ////// 여기에 작성
     ////// 여기에 작성
 */
+
+/*
+    //// 여기에 작성
+    //// 10189 hook
+    //System.out.println("#  # #### #### #  #");
+    //System.out.println("#### #  # #  # # #");
+    //System.out.println("#### #  # #  # # #");
+    //System.out.println("#  # #### #### #  #");
+    //// 여기에 작성
+    //// 여기에 작성
+    //////}
+    //*/
+    ///*
+    ////// 여기에 작성
+    ////System.out.println("커밋 테스트아젠장");
+    ////// 여기에 작성
+    ////// 여기에 작성
+
+/*
+    //// 여기에 작성
+    //
+    //// 여기에 작성
+    //// 여기에 작성
+    ////}
+    /////*
+    //////System.out.println("asdas");
+    //////System.out.println("sdadasad");
+    //////// 여기에 작성
+    //////// 여기에 작성
+    ///////*
+    ////////// 여기에 작성
+    ////////System.out.println("테스트를해요");
+    //*/
+    ///*
+    ////// 여기에 작성
+    ////// 9654번 나부 함대 데이터
+    ////System.out.println("SHIP NAME      CLASS          DEPLOYMENT IN SERVICE");
+    ////System.out.println("N2 Bomber      Heavy Fighter  Limited    21        ");
+    ////System.out.println("J-Type 327     Light Combat   Unlimited  1         ");
+    ////System.out.println("NX Cruiser     Medium Fighter Limited    18        ");
+    ////System.out.println("N1 Starfighter Medium Fighter Unlimited  25        ");
+    ////System.out.println("Royal Cruiser  Light Combat   Limited    4         ");
+    ////// 여기에 작성
+    ////// 여기에 작성
+
