@@ -1,27 +1,48 @@
 import java.util.StringTokenizer;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.math.BigInteger;
 import java.util.Scanner;
+import java.util.ArrayList;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // 여기에 작성
-        // 10757 큰수
-        Scanner sc = new Scanner(System.in);
-        BigInteger a = sc.nextBigInteger();
-        BigInteger b = sc.nextBigInteger();
-        System.out.println(a.add(b));
+        // 버퍼리더 선언
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] firstLine = bf.readLine().split(" "); // 첫번째 줄에 N,X 둘다 동시에 줌 공백 기준으로 짜름
+        int N = Integer.parseInt(firstLine[0]);
+        int X = Integer.parseInt(firstLine[1]);
+
+        // 아 두번째줄 수열도 입력임?
+        // 두 번째 줄 입력 처리 (수열 A)
+        String[] secondLine = bf.readLine().split(" ");
+        int[] array = new int[N];
+        for (int i = 0; i < N; i++) {
+            array[i] = Integer.parseInt(secondLine[i]);
+        }
+
+        // X보다 작은 값 출력
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < N; i++) {
+            if (array[i] < X) {
+                result.append(array[i]).append(" ");
+            }
+        }
+        // 결과 출력
+        System.out.println(result.toString().trim());
     }
 }
 
 
-    // 여기에 작성
-    // String str = bf.readLine();
+// 여기에 작성
+// String str = bf.readLine();
 //          name[i] = str.substring(0, 1) + str.substring(str.length() - 1, str.length());
 
 //        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -30,7 +51,7 @@ public class Main {
 //        String name[] = new String[n];
 //
 //        for (int i = 0; i < n; i++) {
-    // 여기에 작성
+// 여기에 작성
 //        }
 //        bf.close();
 //        for (int i = 0; i < n; i++) {
@@ -340,8 +361,8 @@ public class Main {
 
 
 
-    /*
-     */
+/*
+ */
 /*
     //// 여기에 작성
     //System.out.println("dasdasd");
@@ -406,30 +427,13 @@ public class Main {
         // 여기에 작성
     ////public static void main(String[] args) {
         // 여기에 작성
-    //}
-    ///*
-    ////// 여기에 작성
-    ////System.out.println("?");
-    ////// 여기에 작성
-    ////// 여기에 작성
-*/
-
-/*
-    //// 여기에 작성
-    //// 10189 hook
-    //System.out.println("#  # #### #### #  #");
-    //System.out.println("#### #  # #  # # #");
-    //System.out.println("#### #  # #  # # #");
-    //System.out.println("#  # #### #### #  #");
-    //// 여기에 작성
-    //// 여기에 작성
     //////}
     //*/
-    ///*
-    ////// 여기에 작성
-    ////System.out.println("커밋 테스트아젠장");
-    ////// 여기에 작성
-    ////// 여기에 작성
+///*
+////// 여기에 작성
+////System.out.println("커밋 테스트아젠장");
+////// 여기에 작성
+////// 여기에 작성
 
 /*
     //// 여기에 작성
@@ -446,17 +450,17 @@ public class Main {
     ////////// 여기에 작성
     ////////System.out.println("테스트를해요");
     //*/
-    ///*
-    ////// 여기에 작성
-    ////// 9654번 나부 함대 데이터
-    ////System.out.println("SHIP NAME      CLASS          DEPLOYMENT IN SERVICE");
-    ////System.out.println("N2 Bomber      Heavy Fighter  Limited    21        ");
-    ////System.out.println("J-Type 327     Light Combat   Unlimited  1         ");
-    ////System.out.println("NX Cruiser     Medium Fighter Limited    18        ");
-    ////System.out.println("N1 Starfighter Medium Fighter Unlimited  25        ");
-    ////System.out.println("Royal Cruiser  Light Combat   Limited    4         ");
-    ////// 여기에 작성
-    ////// 여기에 작성
+///*
+////// 여기에 작성
+////// 9654번 나부 함대 데이터
+////System.out.println("SHIP NAME      CLASS          DEPLOYMENT IN SERVICE");
+////System.out.println("N2 Bomber      Heavy Fighter  Limited    21        ");
+////System.out.println("J-Type 327     Light Combat   Unlimited  1         ");
+////System.out.println("NX Cruiser     Medium Fighter Limited    18        ");
+////System.out.println("N1 Starfighter Medium Fighter Unlimited  25        ");
+////System.out.println("Royal Cruiser  Light Combat   Limited    4         ");
+////// 여기에 작성
+////// 여기에 작성
 
 
 /*
@@ -474,24 +478,50 @@ public class Main {
     /////////*
     //////////System.out.println("dasdsa");
     ////*/
-    /////*
-    ////*/
-    ///*
-    ////// 여기에 작성
-    ////// 10170번 NFC West vs North
-    ////System.out.println("NFC West       W   L  T");
-    ////System.out.println("-----------------------");
-    ////System.out.println("Seattle        13  3  0");
-    ////System.out.println("San Francisco  12  4  0");
-    ////System.out.println("Arizona        10  6  0");
-    ////System.out.println("St. Louis      7   9  0");
-    ////System.out.println(); // 공백
-    ////System.out.println("NFC North      W   L  T");
-    ////System.out.println("-----------------------");
-    ////System.out.println("Green Bay      8   7  1");
-    ////System.out.println("Chicago        8   8  0");
-    ////System.out.println("Detroit        7   9  0");
-    ////System.out.println("Minnesota      5  10  1");
-    ////// 여기에 작성
-    ////// 여기에 작성
+/////*
+////*/
+///*
+////// 여기에 작성
+////// 10170번 NFC West vs North
+////System.out.println("NFC West       W   L  T");
+////System.out.println("-----------------------");
+////System.out.println("Seattle        13  3  0");
+////System.out.println("San Francisco  12  4  0");
+////System.out.println("Arizona        10  6  0");
+////System.out.println("St. Louis      7   9  0");
+////System.out.println(); // 공백
+////System.out.println("NFC North      W   L  T");
+////System.out.println("-----------------------");
+////System.out.println("Green Bay      8   7  1");
+////System.out.println("Chicago        8   8  0");
+////System.out.println("Detroit        7   9  0");
+////System.out.println("Minnesota      5  10  1");
+////// 여기에 작성
+////// 여기에 작성
 
+
+/*
+    //// 여기에 작성
+    //// 10757 큰수
+    //Scanner sc = new Scanner(System.in);
+    //BigInteger a = sc.nextBigInteger();
+    //BigInteger b = sc.nextBigInteger();
+    //System.out.println(a.add(b));
+    //// 여기에 작성
+    //// 여기에 작성
+    ////}
+    /////*
+    //////// 여기에 작성
+    //////System.out.println("?");
+    //////// 여기에 작성
+    //////// 여기에 작성
+    //*/
+///*
+////// 여기에 작성
+////// 10189 hook
+////System.out.println("#  # #### #### #  #");
+////System.out.println("#### #  # #  # # #");
+////System.out.println("#### #  # #  # # #");
+////System.out.println("#  # #### #### #  #");
+////// 여기에 작성
+////// 여기에 작성
