@@ -14,12 +14,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int I = Integer.parseInt(bf.readLine()); // 테스트 케이스
+        String A;
 
-        for (int i = 0; i < I; i++) {
-            String A = bf.readLine();
+        while ((A = bf.readLine()) != null && !A.isEmpty()) {
             String arr[] = A.split(" ");
-
             int a = Integer.parseInt(arr[0]);
             int b = Integer.parseInt(arr[1]);
             int result = add(a, b);
@@ -37,4 +35,17 @@ public class Main {
     //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     //String str = bf.readLine();
     //System.out.println(str+"??!");
+*/
+
+/*
+    //// 여기에 작성
+    //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    //int I = Integer.parseInt(bf.readLine()); // 테스트 케이스
+    //String A = bf.readLine();
+    //String arr[] = A.split(" ");
+    //int a = Integer.parseInt(arr[0]);
+    //int b = Integer.parseInt(arr[1]);
+    //int result = add(a, b);
+    //System.out.println(result);
+    //}
 */
