@@ -20,6 +20,9 @@ public class Main {
             String arr[] = A.split(" ");
             int a = Integer.parseInt(arr[0]);
             int b = Integer.parseInt(arr[1]);
+            if(a == 0 && b == 0){
+                return;
+            }
             int result = add(a, b);
             System.out.println(result);
         }
