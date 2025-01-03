@@ -14,17 +14,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A;
+        int I = Integer.parseInt(bf.readLine()); // 테스트 케이스
 
-        while ((A = bf.readLine()) != null && !A.isEmpty()) {
+        for (int i = 0; i < I; i++) {
+            String A = bf.readLine();
             String arr[] = A.split(" ");
             int a = Integer.parseInt(arr[0]);
             int b = Integer.parseInt(arr[1]);
-            if(a == 0 && b == 0){
-                return;
-            }
             int result = add(a, b);
-            System.out.println(result);
+            System.out.println("Case " + "#" + (i + 1) + ": " + result);
         }
     }
 
