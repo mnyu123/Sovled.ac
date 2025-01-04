@@ -9,28 +9,25 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
 public class Main {
     public static void main(String[] args) throws IOException {
-        // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int I = Integer.parseInt(bf.readLine()); // 테스트 케이스
+        String A = bf.readLine(); // 입력값 받기
 
-        for (int i = 0; i < I; i++) {
-            String A = bf.readLine();
-            String arr[] = A.split(" ");
-            int a = Integer.parseInt(arr[0]);
-            int b = Integer.parseInt(arr[1]);
+        String[] arr = A.split(" "); // 공백 한 칸 기준으로 분리
+        Long a = Long.parseLong(arr[0]);
+        Long b = Long.parseLong(arr[1]);
+        Long c = Long.parseLong(arr[2]); // 아이씨 정민아 long타입으로 누가 숫자를 계산해
 
-            int result = add(a, b);
-            System.out.println("Case " + "#" + (i + 1) + ": " + a + " + " + b + " = " + result);
-        }
+        long result = add(a, b, c);
+        System.out.println(result);
     }
 
-    private static int add(int s, int s1) {
-        return s + s1; // 두 수의 합 반환
+    private static long add(long s, long s1, long s2) {
+        return s + s1 + s2;
     }
 }
+
 
 /*
     //// 여기에 작성
