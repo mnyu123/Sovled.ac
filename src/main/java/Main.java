@@ -12,9 +12,7 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        char word = bf.readLine().charAt(0); // 입력값 받기
-        int ascii = (int) word;
-        System.out.println(ascii);
+        System.out.println("고려대학교");
     }
 }
 
