@@ -1,10 +1,10 @@
 import java.util.StringTokenizer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.math.BigInteger;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import java.math.BigInteger;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +12,13 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("고려대학교");
+        String A = bf.readLine();
+        String arr[] = A.split(" "); // 공백 기준으로 나눔
+
+        BigInteger a = new BigInteger(arr[0]);
+        BigInteger b = new BigInteger(arr[1]);
+
+        System.out.println(a.multiply(b));
     }
 }
 
