@@ -12,18 +12,9 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String N = br.readLine(); // 입력 숫자를 문자열로 읽기
-
-        int divisor = 20000303; // 나눌 값
-        int remainder = 0;
-
-        // 문자열의 각 자리 숫자를 사용하여 나머지 계산
-        for (int i = 0; i < N.length(); i++) {
-            remainder = (remainder * 10 + (N.charAt(i) - '0')) % divisor;
-        }
-
-        System.out.println(remainder); // 결과 출력
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        String A = bf.readLine();
+        System.out.println(A.toUpperCase());
     }
 }
 /*
@@ -80,3 +71,15 @@ public class Main {
 ////System.out.println(a.multiply(b));
 ////System.out.println("한국어 테스트");
 //*/
+
+/*
+    //// 여기에 작성
+    //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //String N = br.readLine(); // 입력 숫자를 문자열로 읽기
+    //int divisor = 20000303; // 나눌 값
+    //int remainder = 0;
+    //// 문자열의 각 자리 숫자를 사용하여 나머지 계산
+    //remainder = (remainder * 10 + (N.charAt(i) - '0')) % divisor;
+    //}
+    //System.out.println(remainder); // 결과 출력
+*/
