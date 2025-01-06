@@ -14,15 +14,20 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        int N = Integer.parseInt(A);
+        int L = Integer.parseInt(A); // 성우위치 -> 민건이집 거리 줌 (1~백만)
+        int S = 5; // 성우가 5까지 이동가능
 
-        if (N == 0) {
-            System.out.println("YONSEI");
-        } else if (N == 1) {
-            System.out.println("Leading the Way to the Future");
+        if (L % S == 0) { // 5의 단위 ex 100 이면
+            System.out.println(L / S); // 20분만에 찾음 5,5,5....5,5 해서
         } else {
-            System.out.println("");
+            System.out.println(L / S + 1); // 101,102,103,104 라면     20분에다가 한번 더 가야해서 + 1 해줌
         }
+        // 성우는 1분에 1에서 5까지의 거리를 이동할 수 있다.
+        // 1분 : 1~5 감
+        // 입력으로 성우위치 -> 민건이집 거리 줌 (1~백만)
+        // 빨리찾으면 몇분만에 찾는지
+        // 거리 12를 주면 성우는 5 , 5 , 2 해서 3분만에 감 이런거찾음
+
     }
 }
 /*
