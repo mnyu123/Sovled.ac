@@ -14,16 +14,14 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        String B = bf.readLine();
+        int N = Integer.parseInt(A);
 
-        int R = Integer.parseInt(A);
-        int C = Integer.parseInt(B);
-
-        for (int i = 0; i < R; i++) {
-            for (int j = 0; j < C; j++) {
-                System.out.print("*");
-            }
-            System.out.println(" ");
+        if (N == 0) {
+            System.out.println("YONSEI");
+        } else if (N == 1) {
+            System.out.println("Leading the Way to the Future");
+        } else {
+            System.out.println("");
         }
     }
 }
