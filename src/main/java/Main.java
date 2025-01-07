@@ -1,3 +1,4 @@
+
 import java.util.StringTokenizer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -7,24 +8,26 @@ import java.util.ArrayList;
 import java.math.BigInteger;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
-        String arr[] = A.split(" "); // 공백 기준입력
-
-        long a = Long.parseLong(arr[0]);
-        long b = Long.parseLong(arr[1]);
-
-        long result = golbange(a, b);
-        System.out.println(result);
+        String nowTime = nowTime();
+        System.out.println(nowTime);
     }
 
-    public static long golbange(long a, long b) {
-        return ((a + b) * (a - b));
+    public static String nowTime() {
+        ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
+
+        String year = zonedDateTime.format(DateTimeFormatter.ofPattern("yyyy"));
+        String month = zonedDateTime.format(DateTimeFormatter.ofPattern("MM"));
+        String day = zonedDateTime.format(DateTimeFormatter.ofPattern("dd"));
+
+        return year + "\n" + month + "\n" + day;
     }
 
 }
