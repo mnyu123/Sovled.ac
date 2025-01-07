@@ -12,13 +12,7 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
-        String arr[] = A.split(" "); // 공백기준 입력 받음
-        BigInteger a = new BigInteger(arr[0]);
-        BigInteger b = new BigInteger(arr[1]);
-
-        System.out.println(a.add(b));
+        System.out.println("파이팅!!");
     }
 }
 /*
@@ -86,4 +80,14 @@ public class Main {
     //remainder = (remainder * 10 + (N.charAt(i) - '0')) % divisor;
     //}
     //System.out.println(remainder); // 결과 출력
+*/
+
+/*
+    //// 여기에 작성
+    //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    //String A = bf.readLine();
+    //String arr[] = A.split(" "); // 공백기준 입력 받음
+    //BigInteger a = new BigInteger(arr[0]);
+    //BigInteger b = new BigInteger(arr[1]);
+    //System.out.println(a.add(b));
 */
