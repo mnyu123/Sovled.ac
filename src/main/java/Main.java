@@ -1,35 +1,24 @@
-
 import java.util.StringTokenizer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Scanner;
 import java.util.ArrayList;
-
 import java.math.BigInteger;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        String nowTime = nowTime();
-        System.out.println(nowTime);
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        System.out.println(N - 1946);
     }
-
-    public static String nowTime() {
-        ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("UTC"));
-
-        String year = zonedDateTime.format(DateTimeFormatter.ofPattern("yyyy"));
-        String month = zonedDateTime.format(DateTimeFormatter.ofPattern("MM"));
-        String day = zonedDateTime.format(DateTimeFormatter.ofPattern("dd"));
-
-        return year + "\n" + month + "\n" + day;
-    }
-
 }
 
 /*
