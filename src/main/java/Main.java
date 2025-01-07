@@ -12,7 +12,18 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        System.out.println("파이팅!!");
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        String A = bf.readLine();
+        String arr[] = A.split(" "); // 공백 기준입력
+
+        long N = Long.parseLong(arr[0]);
+        long M = Long.parseLong(arr[1]);
+
+        if (N == M) {
+            System.out.println("1");
+        } else {
+            System.out.println("0");
+        }
     }
 }
 /*
