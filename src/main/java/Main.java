@@ -16,16 +16,19 @@ public class Main {
         String A = bf.readLine();
         String arr[] = A.split(" "); // 공백 기준입력
 
-        long N = Long.parseLong(arr[0]);
-        long M = Long.parseLong(arr[1]);
+        long a = Long.parseLong(arr[0]);
+        long b = Long.parseLong(arr[1]);
 
-        if (N == M) {
-            System.out.println("1");
-        } else {
-            System.out.println("0");
-        }
+        long result = golbange(a, b);
+        System.out.println(result);
     }
+
+    public static long golbange(long a, long b) {
+        return ((a + b) * (a - b));
+    }
+
 }
+
 /*
     //// 여기에 작성
     //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
