@@ -1,29 +1,39 @@
-import java.util.StringTokenizer;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.ArrayList;
 import java.math.BigInteger;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+import java.util.*;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        String arr[] = A.split(" ");
+        int a = Integer.parseInt(A);
+        String B = bf.readLine();
 
-        int n1 = Integer.parseInt(arr[0]);
-        int n2 = Integer.parseInt(arr[1]);
-        int n3 = Integer.parseInt(arr[2]);
+        Set<Character> mo = new HashSet<>();
+        mo.add('a');
+        mo.add('i');
+        mo.add('o');
+        mo.add('u');
+        mo.add('e');
 
-        int N = (((n1 + 1) * (n2 + 1)) / (n3 + 1)) - 1;
-        System.out.println(N);
+
+        int count = 0;
+
+        for (int i = 0; i < a; i++) {
+            char ch = B.charAt(i);
+            if (mo.contains(B.charAt(i))) {
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
 
