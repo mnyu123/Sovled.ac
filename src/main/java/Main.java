@@ -17,7 +17,7 @@ public class Main {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
         int N = Integer.parseInt(A);
-        System.out.println("1");
+        System.out.println(N - 543);
     }
 }
 
