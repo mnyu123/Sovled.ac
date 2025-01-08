@@ -16,28 +16,8 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        String arr[] = A.split(" ");
-
-        int a = Integer.parseInt(arr[0]);
-        int b = Integer.parseInt(arr[1]);
-
-        int steal = b - a;
-        int remain = b;
-
-        int gcd = gcd(steal, remain);
-        steal /= gcd;
-        remain /= gcd;
-
-        System.out.println(steal + " " + remain);
-    }
-
-    private static int gcd(int a, int b) {
-        while (b != 0) {
-            int temp = a % b;
-            a = b;
-            b = temp;
-        }
-        return a;
+        int N = Integer.parseInt(A);
+        System.out.println("1");
     }
 }
 
