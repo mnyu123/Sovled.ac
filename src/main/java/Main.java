@@ -16,8 +16,14 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        int N = Integer.parseInt(A);
-        System.out.println(N - 543);
+        String arr[] = A.split(" ");
+
+        int n1 = Integer.parseInt(arr[0]);
+        int n2 = Integer.parseInt(arr[1]);
+        int n3 = Integer.parseInt(arr[2]);
+
+        int N = (((n1 + 1) * (n2 + 1)) / (n3 + 1)) - 1;
+        System.out.println(N);
     }
 }
 
