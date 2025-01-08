@@ -3,21 +3,41 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.ArrayList;
 import java.math.BigInteger;
-import java.io.BufferedReader;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.io.InputStreamReader;
-import java.io.IOException;
 import java.util.Scanner;
-
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        System.out.println(N - 1946);
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        String A = bf.readLine();
+        String arr[] = A.split(" ");
+
+        int a = Integer.parseInt(arr[0]);
+        int b = Integer.parseInt(arr[1]);
+
+        int steal = b - a;
+        int remain = b;
+
+        int gcd = gcd(steal, remain);
+        steal /= gcd;
+        remain /= gcd;
+
+        System.out.println(steal + " " + remain);
+    }
+
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = a % b;
+            a = b;
+            b = temp;
+        }
+        return a;
     }
 }
 
@@ -96,4 +116,11 @@ public class Main {
     //BigInteger a = new BigInteger(arr[0]);
     //BigInteger b = new BigInteger(arr[1]);
     //System.out.println(a.add(b));
+*/
+
+/*
+    //// 여기에 작성
+    //Scanner sc = new Scanner(System.in);
+    //int N = sc.nextInt();
+    //System.out.println(N - 1946);
 */
