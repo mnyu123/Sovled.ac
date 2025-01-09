@@ -3,10 +3,10 @@ import java.math.BigInteger;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
-import java.util.*;
 
 
 public class Main {
@@ -14,26 +14,14 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        int a = Integer.parseInt(A);
-        String B = bf.readLine();
+        String arr[] = A.split(" ");
 
-        Set<Character> mo = new HashSet<>();
-        mo.add('a');
-        mo.add('i');
-        mo.add('o');
-        mo.add('u');
-        mo.add('e');
+        int UR = Integer.parseInt(arr[0]);
+        int TR = Integer.parseInt(arr[1]);
+        int UO = Integer.parseInt(arr[2]);
+        int TO = Integer.parseInt(arr[3]);
 
-
-        int count = 0;
-
-        for (int i = 0; i < a; i++) {
-            char ch = B.charAt(i);
-            if (mo.contains(B.charAt(i))) {
-                count++;
-            }
-        }
-        System.out.println(count);
+        System.out.println((56 * UR) + (24 * TR) + (14 * UO) + (6 * TO));
     }
 }
 
@@ -119,4 +107,24 @@ public class Main {
     //Scanner sc = new Scanner(System.in);
     //int N = sc.nextInt();
     //System.out.println(N - 1946);
+*/
+
+/*
+    //// 여기에 작성
+    //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    //String A = bf.readLine();
+    //int a = Integer.parseInt(A);
+    //String B = bf.readLine();
+    //Set<Character> mo = new HashSet<>();
+    //mo.add('a');
+    //mo.add('i');
+    //mo.add('o');
+    //mo.add('u');
+    //mo.add('e');
+    //int count = 0;
+    //char ch = B.charAt(i);
+    //count++;
+    //}
+    //}
+    //System.out.println(count);
 */
