@@ -16,13 +16,15 @@ public class Main {
         String A = bf.readLine();
         String arr[] = A.split(" ");
 
-        int N = Integer.parseInt(arr[0]);
+        int Beer = Integer.parseInt(arr[0]);
+        int Malt = Integer.parseInt(arr[1]);
+        int Wine_products = Integer.parseInt(arr[2]);
+        int Carbonated_soft_drinks = Integer.parseInt(arr[3]);
+        int Seltzer = Integer.parseInt(arr[4]);
+        int Water_without_sugar = Integer.parseInt(arr[5]);
 
-        int n = (int) (N * 0.78);
-
-        int yes = (int) ((N * 0.8) + ((N * 0.2) - ((N * 0.2) * 0.22)));
-
-        System.out.println(n + " " + yes);
+        int void_drink = Beer + Malt + Wine_products + Carbonated_soft_drinks + Seltzer + Water_without_sugar;
+        System.out.println(void_drink * 5);
     }
 }
 
