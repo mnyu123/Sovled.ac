@@ -14,17 +14,11 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        String arr[] = A.split(" ");
+        int N = Integer.parseInt(A);
 
-        int Beer = Integer.parseInt(arr[0]);
-        int Malt = Integer.parseInt(arr[1]);
-        int Wine_products = Integer.parseInt(arr[2]);
-        int Carbonated_soft_drinks = Integer.parseInt(arr[3]);
-        int Seltzer = Integer.parseInt(arr[4]);
-        int Water_without_sugar = Integer.parseInt(arr[5]);
-
-        int void_drink = Beer + Malt + Wine_products + Carbonated_soft_drinks + Seltzer + Water_without_sugar;
-        System.out.println(void_drink * 5);
+        for (int i = 0; i < N; i++) {
+            System.out.println("SciComLove");
+        }
     }
 }
 
