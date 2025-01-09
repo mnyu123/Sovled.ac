@@ -16,12 +16,13 @@ public class Main {
         String A = bf.readLine();
         String arr[] = A.split(" ");
 
-        int UR = Integer.parseInt(arr[0]);
-        int TR = Integer.parseInt(arr[1]);
-        int UO = Integer.parseInt(arr[2]);
-        int TO = Integer.parseInt(arr[3]);
+        int N = Integer.parseInt(arr[0]);
 
-        System.out.println((56 * UR) + (24 * TR) + (14 * UO) + (6 * TO));
+        int n = (int) (N * 0.78);
+
+        int yes = (int) ((N * 0.8) + ((N * 0.2) - ((N * 0.2) * 0.22)));
+
+        System.out.println(n + " " + yes);
     }
 }
 
