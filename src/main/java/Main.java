@@ -12,18 +12,7 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        // 첫 번째 줄: 자릿수 정보 N, M (사용하지 않음)
-        String[] arr = bf.readLine().split(" ");
-
-        // 두 번째 줄: 첫 번째 숫자 A
-        BigInteger a = new BigInteger(bf.readLine());
-
-        // 세 번째 줄: 두 번째 숫자 B
-        BigInteger b = new BigInteger(bf.readLine());
-
-        // A * B 계산 후 출력
-        System.out.println(a.multiply(b));
+        System.out.println("The world says hello!");
     }
 }
 
@@ -129,4 +118,17 @@ public class Main {
     //}
     //}
     //System.out.println(count);
+*/
+
+/*
+    //// 여기에 작성
+    //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    //// 첫 번째 줄: 자릿수 정보 N, M (사용하지 않음)
+    //String[] arr = bf.readLine().split(" ");
+    //// 두 번째 줄: 첫 번째 숫자 A
+    //BigInteger a = new BigInteger(bf.readLine());
+    //// 세 번째 줄: 두 번째 숫자 B
+    //BigInteger b = new BigInteger(bf.readLine());
+    //// A * B 계산 후 출력
+    //System.out.println(a.multiply(b));
 */
