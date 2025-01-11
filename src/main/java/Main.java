@@ -12,7 +12,29 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        System.out.println("The world says hello!");
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int caseNumber = 0; // 테스트 케이스 번호
+
+        while (true) {
+            // 한 줄씩 읽기
+            String input = bf.readLine();
+            if (input == null || input.isEmpty()) {
+                break; // 입력이 없거나 비어 있으면 종료
+            }
+
+            // 공백 기준으로 분리
+            String[] parts = input.split(" ");
+            int N = Integer.parseInt(parts[0]); // 첫 번째 숫자는 배열 크기
+
+            // 종료 조건 확인
+            if (N == 0) {
+                break;
+            }
+
+            // 테스트 케이스 처리
+            caseNumber++;
+            System.out.println("Case " + caseNumber + ": Sorting... done!");
+        }
     }
 }
 
