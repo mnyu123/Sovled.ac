@@ -16,7 +16,7 @@ public class Main {
         String A = bf.readLine();
         int X = Integer.parseInt(A);
 
-        System.out.println(X % 21);
+        System.out.println(X * X * X);
     }
 }
 
