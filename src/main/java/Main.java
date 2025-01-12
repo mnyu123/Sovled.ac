@@ -1,5 +1,4 @@
 import java.text.SimpleDateFormat;
-import java.math.BigInteger;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -7,18 +6,26 @@ import java.util.*;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+import java.math.BigInteger;
+
 
 
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
-        int a = Integer.parseInt(A);
+        Scanner scanner = new Scanner(System.in);
 
-        // 출력
-        System.out.println(1); // 코드1의 수행 횟수
-        System.out.println(0); // 최고차항의 차수
+        BigInteger a = scanner.nextBigInteger();
+        BigInteger b = scanner.nextBigInteger();
+        BigInteger c = scanner.nextBigInteger();
+
+        System.out.println(b.subtract(c).divide(a));
+
+        // 4 * X = 20 * 8
+        // 4 * X = 160
+        // X = 160 / 4
+        // a * X = bc
+        // X = bc / a
     }
 }
 
