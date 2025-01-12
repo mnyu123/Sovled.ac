@@ -14,9 +14,12 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        int X = Integer.parseInt(A);
+        String B = bf.readLine();
+        int a = Integer.parseInt(A);
+        int b = Integer.parseInt(B);
 
-        System.out.println(X * X * X);
+        System.out.println(b - a);
+
     }
 }
 
