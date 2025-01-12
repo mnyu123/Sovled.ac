@@ -14,12 +14,11 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        String B = bf.readLine();
         int a = Integer.parseInt(A);
-        int b = Integer.parseInt(B);
 
-        System.out.println(b - a);
-
+        // 출력
+        System.out.println(1); // 코드1의 수행 횟수
+        System.out.println(0); // 최고차항의 차수
     }
 }
 
