@@ -13,12 +13,23 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int R = Integer.parseInt(bf.readLine());
-        int S = Integer.parseInt(bf.readLine());
+        String[] arr = bf.readLine().split(" ");
+        String[] arr2 = bf.readLine().split(" ");
 
-        int student = 28;
+        int touchDown = Integer.parseInt(arr[0]);
+        int fieldGoal = Integer.parseInt(arr[1]);
+        int safe = Integer.parseInt(arr[2]);
+        int afterTouchDownA = Integer.parseInt(arr[3]);
+        int afterTouchDownB = Integer.parseInt(arr[4]);
 
-        System.out.println(((8 * R) + (S * 3)) - student);
+        int touchDown2 = Integer.parseInt(arr2[0]);
+        int fieldGoal2 = Integer.parseInt(arr2[1]);
+        int safe2 = Integer.parseInt(arr2[2]);
+        int afterTouchDownA2 = Integer.parseInt(arr2[3]);
+        int afterTouchDownB2 = Integer.parseInt(arr2[4]);
+
+        System.out.print((6 * touchDown) + (3 * fieldGoal) + (safe * 2) + (afterTouchDownA) + (afterTouchDownB * 2) + " ");
+        System.out.println((6 * touchDown2) + (3 * fieldGoal2) + (safe2 * 2) + (afterTouchDownA2) + (afterTouchDownB2 * 2));
     }
 }
 
