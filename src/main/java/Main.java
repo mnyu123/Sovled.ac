@@ -9,23 +9,16 @@ import java.io.BufferedReader;
 import java.math.BigInteger;
 
 
-
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        Scanner scanner = new Scanner(System.in);
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int R = Integer.parseInt(bf.readLine());
+        int S = Integer.parseInt(bf.readLine());
 
-        BigInteger a = scanner.nextBigInteger();
-        BigInteger b = scanner.nextBigInteger();
-        BigInteger c = scanner.nextBigInteger();
+        int student = 28;
 
-        System.out.println(b.subtract(c).divide(a));
-
-        // 4 * X = 20 * 8
-        // 4 * X = 160
-        // X = 160 / 4
-        // a * X = bc
-        // X = bc / a
+        System.out.println(((8 * R) + (S * 3)) - student);
     }
 }
 
@@ -144,4 +137,18 @@ public class Main {
     //BigInteger b = new BigInteger(bf.readLine());
     //// A * B 계산 후 출력
     //System.out.println(a.multiply(b));
+*/
+
+/*
+    //// 여기에 작성
+    //Scanner scanner = new Scanner(System.in);
+    //BigInteger a = scanner.nextBigInteger();
+    //BigInteger b = scanner.nextBigInteger();
+    //BigInteger c = scanner.nextBigInteger();
+    //System.out.println(b.subtract(c).divide(a));
+    //// 4 * X = 20 * 8
+    //// 4 * X = 160
+    //// X = 160 / 4
+    //// a * X = bc
+    //// X = bc / a
 */
