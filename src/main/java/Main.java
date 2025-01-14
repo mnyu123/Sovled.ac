@@ -16,11 +16,19 @@ public class Main {
         String A = bf.readLine();
         String[] arr = A.split(" ");
 
-        int a = Integer.parseInt(arr[0]); // 가격
-        int b = Integer.parseInt(arr[1]); // 성능
-        int c = Integer.parseInt(arr[2]); // warboy 가격
+        boolean success = true;
 
-        System.out.println((3 * (b * c)) / a);
+        for (String bit : arr) {
+            if (bit.equals("9")) {
+                success = false;
+                break;
+            }
+        }
+        if (success) {
+            System.out.println("S");
+        } else {
+            System.out.println("F");
+        }
     }
 }
 
