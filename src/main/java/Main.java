@@ -12,12 +12,10 @@ import java.math.BigInteger;
 public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
-        System.out.println("         ,r'\"7\n" +
-                "r`-_   ,'  ,/\n" +
-                " \\. \". L_r'\n" +
-                "   `~\\/\n" +
-                "      |\n" +
-                "      |");
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int year = Integer.parseInt(bf.readLine());
+
+        System.out.println("A");
     }
 }
 
@@ -150,4 +148,14 @@ public class Main {
     //// X = 160 / 4
     //// a * X = bc
     //// X = bc / a
+*/
+
+/*
+    //// 여기에 작성
+    //System.out.println("         ,r'\"7\n" +
+    //"r`-_   ,'  ,/\n" +
+    //" \\. \". L_r'\n" +
+    //"   `~\\/\n" +
+    //"      |\n" +
+    //"      |");
 */
