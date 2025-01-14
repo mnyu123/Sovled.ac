@@ -15,14 +15,17 @@ public class Main {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(bf.readLine());
 
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < N / 4; i++) {
-            result.append("long ");
+        String[] arr = new String[N];
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = bf.readLine();
+
+            if (arr[i].length() >= 6 && arr[i].length() <= 9) {
+                System.out.println("yes");
+            } else {
+                System.out.println("no");
+            }
         }
-        result.append("int");
-
-        System.out.println(result);
-
     }
 }
 
