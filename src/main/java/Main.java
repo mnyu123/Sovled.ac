@@ -13,19 +13,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(bf.readLine());
+        String A = bf.readLine();
+        String[] arr = A.split(" ");
 
-        String[] arr = new String[N];
+        int a = Integer.parseInt(arr[0]); // 가격
+        int b = Integer.parseInt(arr[1]); // 성능
+        int c = Integer.parseInt(arr[2]); // warboy 가격
 
-        for (int i = 0; i < N; i++) {
-            arr[i] = bf.readLine();
-
-            if (arr[i].length() >= 6 && arr[i].length() <= 9) {
-                System.out.println("yes");
-            } else {
-                System.out.println("no");
-            }
-        }
+        System.out.println((3 * (b * c)) / a);
     }
 }
 
