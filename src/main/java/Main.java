@@ -13,9 +13,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int year = Integer.parseInt(bf.readLine());
+        int N = Integer.parseInt(bf.readLine());
 
-        System.out.println("A");
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < N / 4; i++) {
+            result.append("long ");
+        }
+        result.append("int");
+
+        System.out.println(result);
+
     }
 }
 
