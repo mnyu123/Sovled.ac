@@ -16,19 +16,18 @@ public class Main {
         String A = bf.readLine();
         String[] arr = A.split(" ");
 
-        boolean success = true;
+        int HH = Integer.parseInt(arr[0]); // 9
+        int MM = Integer.parseInt(arr[1]); // 0
 
-        for (String bit : arr) {
-            if (bit.equals("9")) {
-                success = false;
-                break;
-            }
-        }
-        if (success) {
-            System.out.println("S");
-        } else {
-            System.out.println("F");
-        }
+        // 대회 시작 시간: 9:00
+        int startHH = 9;
+        int startMM = 0;
+
+        // 경과 시간 계산
+        int elapsedTime = (HH - startHH) * 60 + (MM - startMM);
+
+        System.out.println(elapsedTime);
+
     }
 }
 
