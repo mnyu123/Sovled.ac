@@ -13,14 +13,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int count = 0; // 줄 수를 세기 위한 변수
-        String line;
-        while ((line = bf.readLine()) != null) {
-            count++; // 줄 수 증가
-        }
+        int n = Integer.parseInt(bf.readLine());
 
-        // 결과 출력
-        System.out.println(count);
+        int result = 0;
+
+        for (int i = 0; i < n; i++) {
+            int value = Integer.parseInt(bf.readLine());
+            result += value;
+        }
+        System.out.println(result);
     }
 }
 
