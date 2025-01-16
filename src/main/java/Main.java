@@ -13,21 +13,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
-        String[] arr = A.split(" ");
+        int count = 0; // 줄 수를 세기 위한 변수
+        String line;
+        while ((line = bf.readLine()) != null) {
+            count++; // 줄 수 증가
+        }
 
-        int HH = Integer.parseInt(arr[0]); // 9
-        int MM = Integer.parseInt(arr[1]); // 0
-
-        // 대회 시작 시간: 9:00
-        int startHH = 9;
-        int startMM = 0;
-
-        // 경과 시간 계산
-        int elapsedTime = (HH - startHH) * 60 + (MM - startMM);
-
-        System.out.println(elapsedTime);
-
+        // 결과 출력
+        System.out.println(count);
     }
 }
 
@@ -170,4 +163,19 @@ public class Main {
     //"   `~\\/\n" +
     //"      |\n" +
     //"      |");
+*/
+
+/*
+    //// 여기에 작성
+    //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    //String A = bf.readLine();
+    //String[] arr = A.split(" ");
+    //int HH = Integer.parseInt(arr[0]); // 9
+    //int MM = Integer.parseInt(arr[1]); // 0
+    //// 대회 시작 시간: 9:00
+    //int startHH = 9;
+    //int startMM = 0;
+    //// 경과 시간 계산
+    //int elapsedTime = (HH - startHH) * 60 + (MM - startMM);
+    //System.out.println(elapsedTime);
 */
