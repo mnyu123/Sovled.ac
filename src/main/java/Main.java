@@ -13,15 +13,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
         int n = Integer.parseInt(bf.readLine());
 
-        int result = 0;
-
         for (int i = 0; i < n; i++) {
-            int value = Integer.parseInt(bf.readLine());
-            result += value;
+            int N = Integer.parseInt(bf.readLine()); // 7 , 3 , 10
+            System.out.println(N + " " + N);
         }
-        System.out.println(result);
     }
 }
 
@@ -179,4 +177,15 @@ public class Main {
     //// 경과 시간 계산
     //int elapsedTime = (HH - startHH) * 60 + (MM - startMM);
     //System.out.println(elapsedTime);
+*/
+
+/*
+    //// 여기에 작성
+    //BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    //int n = Integer.parseInt(bf.readLine());
+    //int result = 0;
+    //int value = Integer.parseInt(bf.readLine());
+    //result += value;
+    //}
+    //System.out.println(result);
 */
