@@ -14,12 +14,10 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = Integer.parseInt(bf.readLine());
+        BigInteger a = new BigInteger(bf.readLine());
+        BigInteger b = new BigInteger(bf.readLine());
 
-        for (int i = 0; i < n; i++) {
-            int N = Integer.parseInt(bf.readLine()); // 7 , 3 , 10
-            System.out.println(N + " " + N);
-        }
+        System.out.println(a.add(b));
     }
 }
 
