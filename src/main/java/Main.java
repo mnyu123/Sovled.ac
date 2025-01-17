@@ -14,10 +14,24 @@ public class Main {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        BigInteger a = new BigInteger(bf.readLine());
-        BigInteger b = new BigInteger(bf.readLine());
+        int n = Integer.parseInt(bf.readLine());
 
-        System.out.println(a.add(b));
+        for (int i = 0; i < n; i++) {
+            Serca();
+        }
+
+    }
+
+    private static void Serca() {
+        System.out.println(" @@@   @@@ \n" +
+                "@   @ @   @\n" +
+                "@    @    @\n" +
+                "@         @\n" +
+                " @       @ \n" +
+                "  @     @  \n" +
+                "   @   @   \n" +
+                "    @ @    \n" +
+                "     @     ");
     }
 }
 
