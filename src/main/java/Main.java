@@ -13,25 +13,23 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-
         int n = Integer.parseInt(bf.readLine());
 
-        for (int i = 0; i < n; i++) {
-            Serca();
+        int V = n / 5;
+        int I = n % 5;
+
+        String result = "";
+
+        for (int i = 0; i < V; i++) {
+            result = result + "V";
         }
 
-    }
 
-    private static void Serca() {
-        System.out.println(" @@@   @@@ \n" +
-                "@   @ @   @\n" +
-                "@    @    @\n" +
-                "@         @\n" +
-                " @       @ \n" +
-                "  @     @  \n" +
-                "   @   @   \n" +
-                "    @ @    \n" +
-                "     @     ");
+        for (int j = 0; j < I; j++) {
+            result = result + "I";
+        }
+
+        System.out.println(result);
     }
 }
 
