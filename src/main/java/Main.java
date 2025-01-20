@@ -10,24 +10,12 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
-        String[] arr = A.split(" ");
+        int A = Integer.parseInt(bf.readLine());
+        int B = Integer.parseInt(bf.readLine());
 
-        int T = Integer.parseInt(arr[0]); // 시간
-        int S = Integer.parseInt(arr[1]); // 술 여부
-
-        System.out.println(babal(T, S));
+        System.out.println(A*B);
     }
 
-    private static int babal(int t, int s) {
-        if (t <= 11) { // 아침 시간
-            return 280; // 술 여부 상관없이 280
-        } else if (t >= 12 && t <= 16) { // 점심 시간
-            return (s == 0) ? 320 : 280; // 술 없이 점심: 320, 술과 함께 점심: 280
-        } else { // 저녁 시간
-            return 280; // 술 여부 상관없이 280
-        }
-    }
 }
 
 /*
