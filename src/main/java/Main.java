@@ -6,30 +6,27 @@ import java.util.*;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
-import java.math.BigInteger;
-
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // 여기에 작성
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bf.readLine());
+        String A = bf.readLine();
+        String[] arr = A.split(" ");
 
-        int V = n / 5;
-        int I = n % 5;
+        int T = Integer.parseInt(arr[0]); // 시간
+        int S = Integer.parseInt(arr[1]); // 술 여부
 
-        String result = "";
+        System.out.println(babal(T, S));
+    }
 
-        for (int i = 0; i < V; i++) {
-            result = result + "V";
+    private static int babal(int t, int s) {
+        if (t <= 11) { // 아침 시간
+            return 280; // 술 여부 상관없이 280
+        } else if (t >= 12 && t <= 16) { // 점심 시간
+            return (s == 0) ? 320 : 280; // 술 없이 점심: 320, 술과 함께 점심: 280
+        } else { // 저녁 시간
+            return 280; // 술 여부 상관없이 280
         }
-
-
-        for (int j = 0; j < I; j++) {
-            result = result + "I";
-        }
-
-        System.out.println(result);
     }
 }
 
