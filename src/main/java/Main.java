@@ -10,12 +10,20 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int A = Integer.parseInt(bf.readLine());
-        int B = Integer.parseInt(bf.readLine());
+        String A = bf.readLine();
 
-        System.out.println(A*B);
+        String N1 = A.substring(0, 1);
+        String N2 = A.substring(1, 2);
+
+        int n1 = Integer.parseInt(N1);
+        int n2 = Integer.parseInt(N2);
+
+        if (n1 == n2) {
+            System.out.println("1");
+        } else {
+            System.out.println("0");
+        }
     }
-
 }
 
 /*
