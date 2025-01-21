@@ -10,19 +10,9 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
+        int X = Integer.parseInt(bf.readLine());
 
-        String N1 = A.substring(0, 1);
-        String N2 = A.substring(1, 2);
-
-        int n1 = Integer.parseInt(N1);
-        int n2 = Integer.parseInt(N2);
-
-        if (n1 == n2) {
-            System.out.println("1");
-        } else {
-            System.out.println("0");
-        }
+        System.out.println(X * 24);
     }
 }
 
