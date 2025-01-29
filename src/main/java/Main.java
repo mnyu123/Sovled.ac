@@ -10,16 +10,15 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int A = Integer.parseInt(bf.readLine());
-        int B = Integer.parseInt(bf.readLine());
+        String A = bf.readLine();
+        String B = bf.readLine();
 
-        if (A < B) {
-            System.out.println("-1");
-        } else if (A == B) {
-            System.out.println("0");
-        } else {
-            System.out.println("1");
-        }
+        String AB = A + B;
+
+        int result = Integer.parseInt(AB);
+
+        System.out.println(result);
+
     }
 }
 
