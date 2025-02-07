@@ -10,10 +10,14 @@ import java.io.BufferedReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        Float N = (Float) Float.parseFloat(bf.readLine());
+        String A = bf.readLine();
+        int N = Integer.parseInt(A);
+        long result = 1;
 
-        System.out.println(N / 4);
-
+        for (int i = 1; i <= N; i++) {
+            result = result * i;
+        }
+        System.out.println(result);
     }
 }
 
