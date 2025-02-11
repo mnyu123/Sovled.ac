@@ -12,16 +12,19 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String S = bf.readLine();
+        String A = bf.readLine();
+        String[] arr = A.split(" ");
 
-        if (S.equals("NLCS")) {
-            System.out.println("North London Collegiate School");
-        } else if (S.equals("BHA")) {
-            System.out.println("Branksome Hall Asia");
-        } else if (S.equals("KIS")) {
-            System.out.println("Korea International School");
-        } else {
-            System.out.println("St. Johnsbury Academy");
+        int N = Integer.parseInt(arr[0]);
+        int M = Integer.parseInt(arr[1]);
+
+        int money = 100 *  N;
+
+        if(money >= M){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
         }
     }
 }
