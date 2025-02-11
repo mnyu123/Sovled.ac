@@ -15,16 +15,19 @@ public class Main {
         String A = bf.readLine();
         String[] arr = A.split(" ");
 
-        int N = Integer.parseInt(arr[0]);
-        int M = Integer.parseInt(arr[1]);
+        int N = Integer.parseInt(arr[0]); // 버스정류장 -> 지하철 승강장 거리 분  10
+        int a = Integer.parseInt(arr[1]); // 버스 막차 도착 시간  5
+        int B = Integer.parseInt(arr[2]); // 지하철 막차 도착 시간 15
 
-        int money = 100 *  N;
 
-        if(money >= M){
-            System.out.println("Yes");
-        }
-        else{
-            System.out.println("No");
+        int subwayTime = Math.max(N, B); // 지하철까지 걸어간 후 도착하는 시간
+
+        if (a == subwayTime) {
+            System.out.println("Anything");
+        } else if (a < subwayTime) {
+            System.out.println("Bus");
+        } else {
+            System.out.println("Subway");
         }
     }
 }
