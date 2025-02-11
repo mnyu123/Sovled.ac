@@ -13,9 +13,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String S = bf.readLine();
-        int i = Integer.parseInt(bf.readLine());
 
-        System.out.println(S.charAt(i - 1));
+        if (S.equals("NLCS")) {
+            System.out.println("North London Collegiate School");
+        } else if (S.equals("BHA")) {
+            System.out.println("Branksome Hall Asia");
+        } else if (S.equals("KIS")) {
+            System.out.println("Korea International School");
+        } else {
+            System.out.println("St. Johnsbury Academy");
+        }
     }
 }
 
