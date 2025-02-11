@@ -1,39 +1,21 @@
+
 import java.text.SimpleDateFormat;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.math.BigInteger;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String S = bf.readLine();
+        int i = Integer.parseInt(bf.readLine());
 
-        int N = Integer.parseInt(bf.readLine());
-        bf.close();  // 입력 닫기
-
-        bw.write(factorial(N).toString());
-        bw.newLine();
-        bw.flush();
-        bw.close();  // 출력 닫기
-    }
-
-    // 분할 정복을 이용한 최적화된 팩토리얼 함수
-    public static BigInteger factorial(int n) {
-        if (n <= 1) return BigInteger.ONE;
-        int mid = n / 2;
-        return factorial(mid).multiply(factorialRange(mid + 1, n));
-    }
-
-    // 특정 범위의 곱을 빠르게 계산하는 함수
-    public static BigInteger factorialRange(int start, int end) {
-        BigInteger result = BigInteger.ONE;
-        for (int i = start; i <= end; i++) {
-            result = result.multiply(BigInteger.valueOf(i));
-        }
-        return result;
+        System.out.println(S.charAt(i - 1));
     }
 }
 
