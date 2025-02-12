@@ -13,21 +13,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String A = bf.readLine();
-        String[] arr = A.split(" ");
 
-        int N = Integer.parseInt(arr[0]); // 버스정류장 -> 지하철 승강장 거리 분  10
-        int a = Integer.parseInt(arr[1]); // 버스 막차 도착 시간  5
-        int B = Integer.parseInt(arr[2]); // 지하철 막차 도착 시간 15
-
-
-        int subwayTime = Math.max(N, B); // 지하철까지 걸어간 후 도착하는 시간
-
-        if (a == subwayTime) {
-            System.out.println("Anything");
-        } else if (a < subwayTime) {
-            System.out.println("Bus");
+        if (A.equals("SONGDO")) {
+            System.out.println("HIGHSCHOOL");
+        } else if (A.equals("CODE")) {
+            System.out.println("MASTER");
+        } else if (A.equals("2023")) {
+            System.out.println("0611");
         } else {
-            System.out.println("Subway");
+            System.out.println("CONTEST");
         }
     }
 }
