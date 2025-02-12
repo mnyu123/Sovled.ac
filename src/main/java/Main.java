@@ -12,17 +12,19 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
+        String a = bf.readLine();
+        String[] arr = a.split(" ");
 
-        if (A.equals("SONGDO")) {
-            System.out.println("HIGHSCHOOL");
-        } else if (A.equals("CODE")) {
-            System.out.println("MASTER");
-        } else if (A.equals("2023")) {
-            System.out.println("0611");
-        } else {
-            System.out.println("CONTEST");
-        }
+        int H = Integer.parseInt(arr[0]);
+        int I = Integer.parseInt(arr[1]);
+        int A = Integer.parseInt(arr[2]);
+        int R = Integer.parseInt(arr[3]);
+        int C = Integer.parseInt(arr[4]);
+
+        int first = H * I;
+        int second = A * R * C;
+
+        System.out.println(first - second);
     }
 }
 
