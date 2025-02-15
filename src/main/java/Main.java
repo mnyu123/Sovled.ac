@@ -13,18 +13,18 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String a = bf.readLine();
-        String[] arr = a.split(" ");
 
-        int H = Integer.parseInt(arr[0]);
-        int I = Integer.parseInt(arr[1]);
-        int A = Integer.parseInt(arr[2]);
-        int R = Integer.parseInt(arr[3]);
-        int C = Integer.parseInt(arr[4]);
-
-        int first = H * I;
-        int second = A * R * C;
-
-        System.out.println(first - second);
+        if (a.equals("M")) {
+            System.out.println("MatKor");
+        } else if (a.equals("W")) {
+            System.out.println("WiCys");
+        } else if (a.equals("C")) {
+            System.out.println("CyKor");
+        } else if (a.equals("A")) {
+            System.out.println("AlKor");
+        } else {
+            System.out.println("$clear");
+        }
     }
 }
 
