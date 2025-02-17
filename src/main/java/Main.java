@@ -1,4 +1,3 @@
-
 import java.text.SimpleDateFormat;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -12,19 +11,21 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String a = bf.readLine();
+        int N = Integer.parseInt(bf.readLine());
 
-        if (a.equals("M")) {
-            System.out.println("MatKor");
-        } else if (a.equals("W")) {
-            System.out.println("WiCys");
-        } else if (a.equals("C")) {
-            System.out.println("CyKor");
-        } else if (a.equals("A")) {
-            System.out.println("AlKor");
-        } else {
-            System.out.println("$clear");
+        int A = 0;
+        int B = 0;
+        int C = 0;
+
+        for (int i = 1; i <= N; i++) {
+            A += i;
+            B += i;
+            C = (i * i * i) + C;
         }
+
+        System.out.println(A);
+        System.out.println(B * B);
+        System.out.println(C);
     }
 }
 
