@@ -11,21 +11,30 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(bf.readLine());
+        String A = bf.readLine();
+        String B = bf.readLine();
 
-        int A = 0;
-        int B = 0;
-        int C = 0;
+        String[] arrA = A.split(" ");
+        String[] arrB = B.split(" ");
 
-        for (int i = 1; i <= N; i++) {
-            A += i;
-            B += i;
-            C = (i * i * i) + C;
+        int t1 = Integer.parseInt(arrA[0]); // 맥스가 본 예고편 수
+        int e1 = Integer.parseInt(arrA[1]); // 시리즈
+        int f1 = Integer.parseInt(arrA[2]); // 영화수
+
+        int t2 = Integer.parseInt(arrB[0]); // 멜이 본 예고편 수
+        int e2 = Integer.parseInt(arrB[1]); // 시리즈
+        int f2 = Integer.parseInt(arrB[2]); // 영화수
+
+        int totalTimeMax = t1 * 3 + e1 * 20 + f1 * 120;
+        int totalTimeMel = t2 * 3 + e2 * 20 + f2 * 120;
+
+        if (totalTimeMax > totalTimeMel) {
+            System.out.println("Max");
+        } else if (totalTimeMel > totalTimeMax) {
+            System.out.println("Mel");
+        } else {
+            System.out.println("Draw");
         }
-
-        System.out.println(A);
-        System.out.println(B * B);
-        System.out.println(C);
     }
 }
 
