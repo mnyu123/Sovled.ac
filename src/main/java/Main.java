@@ -11,29 +11,23 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String A = bf.readLine();
-        String B = bf.readLine();
+        int n = Integer.parseInt(bf.readLine());
 
-        String[] arrA = A.split(" ");
-        String[] arrB = B.split(" ");
+        String[] arrB = bf.readLine().split(" "); // 공백으로 구분된 숫자들 읽기
 
-        int t1 = Integer.parseInt(arrA[0]); // 맥스가 본 예고편 수
-        int e1 = Integer.parseInt(arrA[1]); // 시리즈
-        int f1 = Integer.parseInt(arrA[2]); // 영화수
+        int sum = 0; // 총 이동 거리 계산용 변수
 
-        int t2 = Integer.parseInt(arrB[0]); // 멜이 본 예고편 수
-        int e2 = Integer.parseInt(arrB[1]); // 시리즈
-        int f2 = Integer.parseInt(arrB[2]); // 영화수
+        for (int i = 0; i < n; i++) {
+            sum += Integer.parseInt(arrB[i]); // 배열 값을 정수로 변환하여 합산
+        }
 
-        int totalTimeMax = t1 * 3 + e1 * 20 + f1 * 120;
-        int totalTimeMel = t2 * 3 + e2 * 20 + f2 * 120;
-
-        if (totalTimeMax > totalTimeMel) {
-            System.out.println("Max");
-        } else if (totalTimeMel > totalTimeMax) {
-            System.out.println("Mel");
+        // 출력 결과 결정
+        if (sum > 0) {
+            System.out.println("Right");
+        } else if (sum < 0) {
+            System.out.println("Left");
         } else {
-            System.out.println("Draw");
+            System.out.println("Stay");
         }
     }
 }
