@@ -11,43 +11,16 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-
-        int N = Integer.parseInt(bf.readLine());
-        String Si[] = new String[N];
+        int N = Integer.parseInt(bf.readLine()); //
 
         for (int i = 0; i < N; i++) {
-            Si[i] = bf.readLine();
-        }
+            String[] arr = bf.readLine().split(" ");
 
-        String[] arrs = {
-                "Never gonna give you up",
-                "Never gonna let you down",
-                "Never gonna run around and desert you",
-                "Never gonna make you cry",
-                "Never gonna say goodbye",
-                "Never gonna tell a lie and hurt you",
-                "Never gonna stop"
-        };
+            int Ai = Integer.parseInt(arr[0]); // 라면 계수
+            int Bi = Integer.parseInt(arr[1]); // 물의 양
+            int Xi = Integer.parseInt(arr[2]); // 끓일 라면의 수
 
-        boolean isChanged = false;
-        for (int i = 0; i < N; i++) {
-            boolean isMatch = false;
-            for (String s : arrs) {
-                if (Si[i].equals(s)) {
-                    isMatch = true;
-                    break;
-                }
-            }
-            if (!isMatch) {
-                isChanged = true;
-                break;
-            }
-        }
-
-        if (isChanged) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
+            System.out.println((Ai * (Xi - 1)) + Bi);
         }
     }
 }
