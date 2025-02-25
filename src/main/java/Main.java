@@ -11,16 +11,12 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(bf.readLine()); //
 
-        for (int i = 0; i < N; i++) {
-            String[] arr = bf.readLine().split(" ");
+        int B = Integer.parseInt(bf.readLine());
+        int A = B * 10 / 110;
 
-            int Ai = Integer.parseInt(arr[0]); // 라면 계수
-            int Bi = Integer.parseInt(arr[1]); // 물의 양
-            int Xi = Integer.parseInt(arr[2]); // 끓일 라면의 수
+        int result = B - A;
 
-            System.out.println((Ai * (Xi - 1)) + Bi);
-        }
+        System.out.println(result);
     }
 }
