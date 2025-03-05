@@ -11,25 +11,21 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bf.readLine());
-        String[] arr = bf.readLine().split(" ");
+        int N = Integer.parseInt(bf.readLine());
 
-        int evenCount = 0;
-        int oddCount = 0;
+        String str = "WelcomeToSMUPC";
+        char[] arr = str.toCharArray();
 
-        for (int i = 0; i < n; i++) {
-            int number = Integer.parseInt(arr[i]);
-            if (number % 2 == 0) {
-                evenCount++;
-            } else {
-                oddCount++;
-            }
-        }
-
-        if (evenCount > oddCount) {
-            System.out.println("Happy");
+        if (N < 15) {
+            System.out.println(arr[N - 1]); // 1-based index 처리
+        } else if (N == 15) {
+            System.out.println(arr[0]); // 15번째는 "W"
         } else {
-            System.out.println("Sad");
+            if (N % 14 == 0) {
+                System.out.println(arr[13]); // 14번째("C")
+            } else {
+                System.out.println(arr[(N % 14) - 1]); // 나머지 처리
+            }
         }
     }
 }
