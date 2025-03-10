@@ -11,17 +11,41 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int Arno = Integer.parseInt(bf.readLine()); // 아르노가 잠자는 시간 20시~23시 , 0시~3시
-        int alarm = Integer.parseInt(bf.readLine()); // 아르노아 알람 맞춰놓은 시간
 
-        int result = 0;
+        int N = Integer.parseInt(bf.readLine());
 
-        if (Arno <= alarm) {
-            result = alarm - Arno;
-        } else {
-            result = (24 - Arno) + alarm;
+        String A = "";
+
+        for (int i = 0; i < N; i++) {
+            A = bf.readLine();
+            System.out.println(info(A));
         }
+    }
 
-        System.out.println(result);
+    public static String info(String A) {
+        switch (A) {
+            case "Algorithm":
+                A = "204";
+                break;
+            case "DataAnalysis":
+                A = "207";
+                break;
+            case "ArtificialIntelligence":
+                A = "302";
+                break;
+            case "CyberSecurity":
+                A = "B101";
+                break;
+            case "Network":
+                A = "303";
+                break;
+            case "Startup":
+                A = "501";
+                break;
+            case "TestStrategy":
+                A = "105";
+                break;
+        }
+        return A;
     }
 }
