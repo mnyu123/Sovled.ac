@@ -12,46 +12,20 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(bf.readLine());
-        SUAPC(N);
-    }
+        StringTokenizer st = new StringTokenizer(bf.readLine());
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < N; i++) {
+            int A = Integer.parseInt(st.nextToken());
 
-    private static void SUAPC(int n) {
-        switch (n) {
-            case 1:
-                System.out.println("12 1600");
-                break;
-            case 2:
-                System.out.println("11 894");
-                break;
-            case 3:
-                System.out.println("11 1327");
-                break;
-            case 4:
-                System.out.println("10 1311");
-                break;
-            case 5:
-                System.out.println("9 1004");
-                break;
-            case 6:
-                System.out.println("9 1178");
-                break;
-            case 7:
-                System.out.println("9 1357");
-                break;
-            case 8:
-                System.out.println("8 837");
-                break;
-            case 9:
-                System.out.println("7 1055");
-                break;
-            case 10:
-                System.out.println("6 556");
-                break;
-            case 11:
-                System.out.println("6 773");
-                break;
-            default:
-                System.out.println("NOT FOUND");
+            if (A > max) {
+                max = A;
+            }
+            if (A < min) {
+                min = A;
+            }
         }
+
+        System.out.printf("%d %d%n", min, max);
     }
 }
