@@ -11,22 +11,47 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int Ramda = Integer.parseInt(bf.readLine());
+        int N = Integer.parseInt(bf.readLine());
+        SUAPC(N);
+    }
 
-        if (Ramda >= 380 && Ramda < 425) {
-            System.out.println("Violet");
-        } else if (Ramda >= 425 && Ramda < 450) {
-            System.out.println("Indigo");
-        } else if (Ramda >= 450 && Ramda < 495) {
-            System.out.println("Blue");
-        } else if (Ramda >= 495 && Ramda < 570) {
-            System.out.println("Green");
-        } else if (Ramda >= 570 && Ramda < 590) {
-            System.out.println("Yellow");
-        } else if (Ramda >= 590 && Ramda < 620) {
-            System.out.println("Orange");
-        } else if (Ramda >= 620 && Ramda <= 780) {
-            System.out.println("Red");
+    private static void SUAPC(int n) {
+        switch (n) {
+            case 1:
+                System.out.println("12 1600");
+                break;
+            case 2:
+                System.out.println("11 894");
+                break;
+            case 3:
+                System.out.println("11 1327");
+                break;
+            case 4:
+                System.out.println("10 1311");
+                break;
+            case 5:
+                System.out.println("9 1004");
+                break;
+            case 6:
+                System.out.println("9 1178");
+                break;
+            case 7:
+                System.out.println("9 1357");
+                break;
+            case 8:
+                System.out.println("8 837");
+                break;
+            case 9:
+                System.out.println("7 1055");
+                break;
+            case 10:
+                System.out.println("6 556");
+                break;
+            case 11:
+                System.out.println("6 773");
+                break;
+            default:
+                System.out.println("NOT FOUND");
         }
     }
 }
