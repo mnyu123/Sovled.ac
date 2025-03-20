@@ -6,18 +6,8 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(bf.readLine());  // 테스트 케이스 개수 입력받기
+        StringTokenizer st = new StringTokenizer(bf.readLine(), " "); // 공백 기준으로 단어받음
 
-        StringBuilder sb = new StringBuilder();  // 신규 문법
-
-
-        for (int i = 0; i < T; i++) {
-            StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
-            int A = Integer.parseInt(st.nextToken());
-            int B = Integer.parseInt(st.nextToken());
-
-            sb.append(A + B).append("\n");
-        }
-        System.out.println(sb.toString());
+        System.out.println(st.countTokens());
     }
 }
