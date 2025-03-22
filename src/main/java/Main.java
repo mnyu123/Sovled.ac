@@ -1,29 +1,34 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String S = br.readLine(); // 단어 입력
-        int[] alphabet = new int[26];
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        // 같은눈 3개 (6,6,6) 10000+(6)x1000원 상금 -> 16000원
+        // 같은눈 2개 (5,5,1) 1000+(5)x100원 상금 -> 1500원
+        // 모두 다름 (1,2,3) 3x100원 상금 -> 300원
 
-        for (int i = 0; i < alphabet.length; i++) {
-            alphabet[i] = -1; // 처음에는 전부 -1로 초기화(아직 아무것도 안나왔으니까)
-        }
+        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
 
-        for (int j = 0; j < S.length(); j++) {
-            char ch = S.charAt(j); // 왼쪽부터 찾음
-            int index = ch - 'a'; // 알파벳이 등장한 인덱스임
-            if (alphabet[index] == -1) {
-                alphabet[index] = j; // 알파벳 그 인덱스 위치에 현재 j위치 넣어서 저장
-            }
-        }
-
-        for (int k = 0; k < alphabet.length; k++) {
-            System.out.print(alphabet[k] + " ");
+        if (a == b && b == c) {
+            System.out.println(10000 + (a * 1000));
+        } else if (a == b || b == c || a == c) {
+            int same;
+            if (a == b) same = a;
+            else if (b == c) same = b;
+            else same = a; // (a == c)
+            System.out.println(1000 + (same * 100));
+        } else {
+            int max;
+            if (a > b && a > c) max = a;
+            else if (b > a && b > c) max = b;
+            else max = c;
+            System.out.println(max * 100);
         }
     }
 }
