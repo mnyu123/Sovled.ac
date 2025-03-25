@@ -6,13 +6,13 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        // A엔 사탕 B개 구매
-        // C엔 봉투 구매
+        int N = Integer.parseInt(bf.readLine());
 
-        int A = Integer.parseInt(bf.readLine());
-        int B = Integer.parseInt(bf.readLine());
-        int C = Integer.parseInt(bf.readLine());
-
-        System.out.println((A * B) + C);
+        for (int i = N; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
