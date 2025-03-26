@@ -6,13 +6,13 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(bf.readLine());
+        int X = Integer.parseInt(bf.readLine());
 
-        for (int i = N; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+        if(X % 7 == 2) {
+            System.out.println("1");
+        }
+        else{
+            System.out.println("0");
         }
     }
 }
