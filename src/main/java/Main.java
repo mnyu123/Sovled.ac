@@ -6,9 +6,16 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int H = Integer.parseInt(bf.readLine());
-        int M = Integer.parseInt(bf.readLine());
+        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
 
-        System.out.println((60 * H) + M);
+        int A = Integer.parseInt(st.nextToken());
+        int B = Integer.parseInt(st.nextToken());
+        int C = Integer.parseInt(st.nextToken());
+
+        if (A + B == C) {
+            System.out.println("correct!");
+        } else {
+            System.out.println("wrong!");
+        }
     }
 }
