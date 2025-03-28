@@ -7,24 +7,18 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
 
-        int A = Integer.parseInt(st.nextToken());
-        int B = Integer.parseInt(st.nextToken());
-        int C = Integer.parseInt(st.nextToken());
+        boolean[] number = new boolean[31];
 
-        int[] arrays = {A, B, C};
-
-        // 버블정렬 연습
-        for (int i = 0; i < arrays.length - 1; i++) {
-            for (int j = 0; j < arrays.length - 1; j++) {
-                if (arrays[j] < arrays[j + 1]) {
-                    int temp = arrays[j];
-                    arrays[j] = arrays[j + 1];
-                    arrays[j + 1] = temp;
-                }
+        for (int i = 0; i < 28; i++) {
+            // 입력
+            int check = Integer.parseInt(bf.readLine());
+            number[check] = true; // 숫자 있으면 true
+        }
+        for (int i = 1; i <= 30; i++) {
+            if (!number[i]) { // false(NOT) -> true, 즉 아까 입력때 없었으면
+                System.out.println(i);
             }
         }
-        System.out.println(arrays[1]);
     }
 }
