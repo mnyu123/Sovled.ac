@@ -8,15 +8,10 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
+        int N = Integer.parseInt(bf.readLine());
 
-        int A = Integer.parseInt(st.nextToken());
-        int B = Integer.parseInt(st.nextToken());
-
-        add(A, B);
-    }
-
-    public static int add(int A, int B) {
-        return A + B;
+        for (int i = 0; i < N; i++) {
+            System.out.print("LoveisKoreaUniversity ");
+        }
     }
 }
