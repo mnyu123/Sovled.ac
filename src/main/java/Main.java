@@ -10,8 +10,6 @@ public class Main {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(bf.readLine());
 
-        for (int i = 0; i < N; i++) {
-            System.out.print("LoveisKoreaUniversity ");
-        }
+        System.out.println(N - 2024);
     }
 }
