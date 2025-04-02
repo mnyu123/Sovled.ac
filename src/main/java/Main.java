@@ -8,15 +8,13 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
+        int Sab = Integer.parseInt(bf.readLine());
+        int Fab = Integer.parseInt(bf.readLine());
 
-        int Ti = Integer.parseInt(st.nextToken());
-        int Tj = Integer.parseInt(st.nextToken());
-
-        if (Ti > Tj) {
-            System.out.println(Tj);
+        if (Sab > Fab) {
+            System.out.println("flight");
         } else {
-            System.out.println(Ti);
+            System.out.println("high speed rail");
         }
     }
 }
