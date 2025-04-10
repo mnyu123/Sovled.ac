@@ -9,10 +9,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        int susuiA = Integer.parseInt(bf.readLine());
-        int susuiB = Integer.parseInt(bf.readLine());
-        int susuiC = Integer.parseInt(bf.readLine());
+        int result = 0;
+        for (int i = 0; i < 5; i++) {
+            int score = Integer.parseInt(bf.readLine());
+            if (score < 40) {
+                score = 40;
+            }
+            result += score;
+        }
 
-        System.out.println((3 * susuiA) + (4 * susuiB) + (5 * susuiC));
+        System.out.println(result / 5);
     }
 }
