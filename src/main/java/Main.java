@@ -8,16 +8,12 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
 
-        int result = 0;
-        for (int i = 0; i < 5; i++) {
-            int score = Integer.parseInt(bf.readLine());
-            if (score < 40) {
-                score = 40;
-            }
-            result += score;
-        }
+        int R1 = Integer.parseInt(st.nextToken());
+        int S = Integer.parseInt(st.nextToken());
 
-        System.out.println(result / 5);
+        // R1+R2 / 2 평균이랑 R1을 기억하고 있으니까 R2를 유추하래요
+        System.out.println((S * 2) - R1);
     }
 }
