@@ -6,16 +6,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        String S = bf.readLine();
-        int[] count = new int[26];
-
-        for (int i = 0; i < S.length(); i++) {
-            char c = S.charAt(i);
-            count[c - 'a']++;
+        int[] prices = new int[5];
+        for (int i = 0; i < 5; i++) {
+            int price = Integer.parseInt(bf.readLine());
+            prices[i] = price;
         }
+        int minBurger = Math.min(prices[0], Math.min(prices[1], prices[2]));
+        int minDrink = Math.min(prices[3], prices[4]);
 
-        for (int j = 0; j < count.length; j++) {
-            System.out.print(count[j] + " ");
-        }
+        int setPrice = minBurger + minDrink - 50;
+
+        System.out.println(setPrice);
     }
 }
