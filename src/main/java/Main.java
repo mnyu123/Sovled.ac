@@ -1,26 +1,35 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int angle1 = Integer.parseInt(bf.readLine());
-        int angle2 = Integer.parseInt(bf.readLine());
-        int angle3 = Integer.parseInt(bf.readLine());
+        StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
+        int[] arrays = new int[3];
 
-        int sum = angle1 + angle2 + angle3; // 각의 합
+        for (int i = 0; i < 3; i++) {
+            arrays[i] = Integer.parseInt(st.nextToken());
+        }
 
-        if (angle1 == 60 && angle2 == 60 && angle3 == 60) {
-            System.out.println("Equilateral");
-        } else if (sum == 180) {
-            if (angle1 == angle2 || angle2 == angle3 || angle1 == angle3) {
-                System.out.println("Isosceles");
-            } else {
-                System.out.println("Scalene");
+        sortThree(arrays);
+
+        for (int num : arrays) {
+            System.out.print(num + " ");
+        }
+    }
+
+    private static void sortThree(int[] array) {
+        int temp;
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
             }
-        } else {
-            System.out.println("Error");
         }
     }
 }
