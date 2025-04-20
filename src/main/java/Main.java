@@ -7,29 +7,21 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
-        int[] arrays = new int[3];
 
-        for (int i = 0; i < 3; i++) {
-            arrays[i] = Integer.parseInt(st.nextToken());
-        }
+        int hour = Integer.parseInt(st.nextToken());
+        int minute = Integer.parseInt(st.nextToken());
+        int second = Integer.parseInt(st.nextToken());
 
-        sortThree(arrays);
+        int cook = Integer.parseInt(bf.readLine());
 
-        for (int num : arrays) {
-            System.out.print(num + " ");
-        }
-    }
+        int totalsecond = hour * 3600 + minute * 60 + second;
 
-    private static void sortThree(int[] array) {
-        int temp;
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2 - i; j++) {
-                if (array[j] > array[j + 1]) {
-                    temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
-            }
-        }
+        totalsecond += cook;
+
+        int newhour = (totalsecond / 3600) % 24;
+        int newminute = (totalsecond % 3600) / 60;
+        int newsecond = totalsecond % 60;
+
+        System.out.println(newhour + " " + newminute + " " + newsecond);
     }
 }
