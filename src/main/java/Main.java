@@ -6,22 +6,20 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        // 과자 1개 가격 K
+        // 사려는 과자 개수 N
+        // 돈 : M
+        // 모자란 값 계산
+
         StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
+        int K = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
 
-        int hour = Integer.parseInt(st.nextToken());
-        int minute = Integer.parseInt(st.nextToken());
-        int second = Integer.parseInt(st.nextToken());
-
-        int cook = Integer.parseInt(bf.readLine());
-
-        int totalsecond = hour * 3600 + minute * 60 + second;
-
-        totalsecond += cook;
-
-        int newhour = (totalsecond / 3600) % 24;
-        int newminute = (totalsecond % 3600) / 60;
-        int newsecond = totalsecond % 60;
-
-        System.out.println(newhour + " " + newminute + " " + newsecond);
+        if ((K * N) - M < 0) {
+            System.out.println(0);
+        } else {
+            System.out.println((K * N) - M);
+        }
     }
 }
