@@ -6,20 +6,22 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        // 과자 1개 가격 K
-        // 사려는 과자 개수 N
-        // 돈 : M
-        // 모자란 값 계산
-
+        int settingDay = Integer.parseInt(bf.readLine());
         StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
-        int K = Integer.parseInt(st.nextToken());
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
 
-        if ((K * N) - M < 0) {
-            System.out.println(0);
-        } else {
-            System.out.println((K * N) - M);
+        int check = 0;
+        for (int i = 0; i < 5; i++) {
+            int carLastNumber = Integer.parseInt(st.nextToken());
+            if (carLastNumber > 10) {
+                int divLastNumber = carLastNumber % 10;
+                if (divLastNumber == settingDay) {
+                    check++;
+                }
+            }
+            if (settingDay == carLastNumber) {
+                check++;
+            }
         }
+        System.out.println(check);
     }
 }
