@@ -5,10 +5,15 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String X = bf.readLine();
-//         int X  = Integer.parseInt(bf.readLine());
-        String[] parts = X.split("\\.");
+        int n = Integer.parseInt(bf.readLine());
+        int result = 0;
+        for (int i = 0; i < n; i++) {
+            int problem = Integer.parseInt(bf.readLine());
 
-        System.out.println(parts[0]);
+            if(problem % 2 == 1){
+                result++;
+            }
+        }
+        System.out.println(result);
     }
 }
