@@ -5,9 +5,9 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(bf.readLine());
-        int V = Integer.parseInt(bf.readLine());
+        int A = Integer.parseInt(bf.readLine());
+        int B = Integer.parseInt(bf.readLine());
 
-        System.out.println(T * V);
+        System.out.println((A * 1000) + (B * 10000));
     }
 }
