@@ -1,24 +1,27 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String input;
 
-        while (!(input = bf.readLine()).equals("#")) {
-            int count = 0;
-            input = input.toLowerCase(); // 대소문자 구분 없이 비교하기 위해 소문자로 변환
 
-            for (int i = 0; i < input.length(); i++) {
-                char c = input.charAt(i);
-                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                    count++;
-                }
+        while (true) {
+            int M = 0;
+            int F = 0;
+
+            StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
+
+            M = Integer.parseInt(st.nextToken());
+            F = Integer.parseInt(st.nextToken());
+
+            if (M == 0 && F == 0) {
+                break;
+            } else {
+                System.out.println(M + F);
             }
-
-            System.out.println(count);
         }
     }
 }
