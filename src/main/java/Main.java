@@ -6,22 +6,13 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(bf.readLine());
+        int result = 1;
 
-
-        while (true) {
-            int M = 0;
-            int F = 0;
-
-            StringTokenizer st = new StringTokenizer(bf.readLine(), " ");
-
-            M = Integer.parseInt(st.nextToken());
-            F = Integer.parseInt(st.nextToken());
-
-            if (M == 0 && F == 0) {
-                break;
-            } else {
-                System.out.println(M + F);
-            }
+        for (int i = N; i > 0; i--) {
+            result = result * i;
         }
+        System.out.println(result);
+
     }
 }
