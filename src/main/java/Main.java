@@ -5,18 +5,12 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(bf.readLine());
-
-        for (int i = 1; i <= N; i++) {
-            System.out.print(i + " ");
-            if (i % 6 == 0) {
-                System.out.print("Go! ");
-            }
+        int total = Integer.parseInt(bf.readLine()); // 영수증 총액
+        int result = 0;
+        for (int i = 0; i < 9; i++) {
+            int book = Integer.parseInt(bf.readLine()); // 9개 책가격
+            result += book;
         }
-
-        // 마지막 그룹에 6명이 안 됐을 경우에도 Go! 출력
-        if (N % 6 != 0) {
-            System.out.print("Go!");
-        }
+        System.out.println(total - result);
     }
 }
