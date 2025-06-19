@@ -5,23 +5,15 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        while (true) {
-            String input = bf.readLine();
-            if (input.equals("END")) {
-                break;
-            }
-            System.out.println(reverse(input));
+        int month = Integer.parseInt(bf.readLine());
+        int day = Integer.parseInt(bf.readLine());
+
+        if (month == 2 && day == 18) {
+            System.out.println("Special");
+        } else if (month < 2 || (month == 2 && day < 18)) {
+            System.out.println("Before");
+        } else {
+            System.out.println("After");
         }
-    }
-
-    public static String reverse(String A) {
-        String reverse = "";
-        String str = A;
-
-        for (int i = A.length() - 1; i >= 0; i--) {
-            reverse = reverse + str.charAt(i);
-        }
-
-        return reverse;
     }
 }
