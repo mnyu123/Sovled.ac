@@ -6,14 +6,13 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int A = Integer.parseInt(bf.readLine());
-        int B = Integer.parseInt(bf.readLine());
-        int C = Integer.parseInt(bf.readLine());
+        int A = Integer.parseInt(bf.readLine()); // 막내의 나이
+        int B = Integer.parseInt(bf.readLine()); // 둘째의 나이
 
-        if ((A + B + C) <= 21) {
-            System.out.println("1");
-        } else {
-            System.out.println("0");
-        }
+        // 막내가 12 , 5
+        // 둘째가 15 , 10
+        //            15
+
+        System.out.println((B - A) + (B));
     }
 }
