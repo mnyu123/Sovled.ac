@@ -1,35 +1,36 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Objects;
 import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String s = "1 2 3 4";
-        System.out.println(solution(s));
-    }
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        char[] arr = {'a', 'e', 'i', 'o', 'u'};
 
-    public static String solution(String s) {
-        String answer = "";
-        StringTokenizer st = new StringTokenizer(s , " ");
-        int A = 0, B = 0 , C =0  , D = 0;
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-        int[] numbers = new int[s.length()];
-        while (st.hasMoreTokens()) {
-            int num = Integer.parseInt(st.nextToken());
-            if (num > max) max = num;
-            if (num < min) min = num;
+        while (true) {
+            String A = bf.readLine();
+            char check = 0;
+
+            String smallA = A.toLowerCase(); // 싹다 소문자 변경
+            int count = 0; // 초기화를 해줘야
+
+            if (smallA.equals("#")) {
+                break;
+            }
+
+            for (int i = 0; i < smallA.length(); i++) {
+                check = smallA.charAt(i);
+
+                for (int j = 0; j < arr.length; j++) {
+                    if (check == arr[j]) {
+                        count++;
+                        break;
+                    }
+                }
+            }
+            System.out.println(count);
         }
-
-        answer = min + " " + max;
-        //System.out.println(answer);
-
-
-        // 문자열 s에 공백으로 숫자들이 이미 저장되어있음
-        // str에 나타나는 숫자중에 최대 , 최소 찾아서
-        // 최대 최소를 한칸 공백 두고 반환하는 solution 함수 완성
-
-        return answer;
     }
 }
