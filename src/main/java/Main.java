@@ -7,30 +7,10 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        char[] arr = {'a', 'e', 'i', 'o', 'u'};
+        int N = Integer.parseInt(bf.readLine());
+        // 두가지 방법이 N제곱 겹침
 
-        while (true) {
-            String A = bf.readLine();
-            char check = 0;
-
-            String smallA = A.toLowerCase(); // 싹다 소문자 변경
-            int count = 0; // 초기화를 해줘야
-
-            if (smallA.equals("#")) {
-                break;
-            }
-
-            for (int i = 0; i < smallA.length(); i++) {
-                check = smallA.charAt(i);
-
-                for (int j = 0; j < arr.length; j++) {
-                    if (check == arr[j]) {
-                        count++;
-                        break;
-                    }
-                }
-            }
-            System.out.println(count);
-        }
+        int result = (int) Math.pow(2, N);
+        System.out.println(result);
     }
 }
