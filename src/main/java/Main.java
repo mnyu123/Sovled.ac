@@ -2,22 +2,27 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Objects;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        StringTokenizer st = new StringTokenizer(bf.readLine());
-        int A = Integer.parseInt(st.nextToken()); // 1
-        int B = Integer.parseInt(st.nextToken()); // 2
+    }
 
-        // 두 번째 줄 입력
-        st = new StringTokenizer(bf.readLine());
-        int C = Integer.parseInt(st.nextToken()); // 3
-        int D = Integer.parseInt(st.nextToken()); // 4
+    public static class Solution {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            int number = sc.nextInt();
+            int answer = 0;
 
-        int result = Math.min(B + C, A + D);
-        System.out.println(result);
+            for(int i=0; i<number; i++){
+                answer += number % 100; // 59
+                number /= 100;// 48
+                answer += number;
+            }
+
+            System.out.println(answer);
+        }
     }
 }
