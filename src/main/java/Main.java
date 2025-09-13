@@ -11,10 +11,12 @@ public class Main {
     }
 
     public static class Solution {
-        public int solution(int age) {
+        public int solution(int n) {
             int answer = 0;
-            int nowYear = 2022;
-            answer = (nowYear + 1) - age;
+            while (n > 0) { // true
+                answer += n % 10; // 23 , 3
+                n /= 10;     // 12     , 2 , 1
+            }
             return answer;
         }
     }
