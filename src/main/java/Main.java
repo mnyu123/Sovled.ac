@@ -11,14 +11,10 @@ public class Main {
     }
 
     public static class Solution {
-        public int solution(int num1, int num2) {
+        public int solution(int age) {
             int answer = 0;
-            if(num1 == num2){
-                answer = 1;
-            }
-            else{
-                answer = -1;
-            }
+            int nowYear = 2022;
+            answer = (nowYear + 1) - age;
             return answer;
         }
     }
