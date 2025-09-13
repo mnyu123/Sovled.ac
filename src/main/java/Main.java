@@ -11,18 +11,10 @@ public class Main {
     }
 
     public static class Solution {
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            int number = sc.nextInt();
+        public int solution(int num1, int num2) {
             int answer = 0;
-
-            for(int i=0; i<number; i++){
-                answer += number % 100; // 59
-                number /= 100;// 48
-                answer += number;
-            }
-
-            System.out.println(answer);
+            answer = num1 * num2;
+            return answer;
         }
     }
 }
