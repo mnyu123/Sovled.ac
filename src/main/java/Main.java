@@ -18,8 +18,10 @@ public class Main {
 
 class Solution {
     public int solution(int num1, int num2) {
-        int answer = 0;
-        answer = num1 / num2;
-        return answer;
+        // num1 / num2를 double로 나눈 후 1000 곱하기
+        double answer = ((double) num1 / num2) * 1000;
+
+        // int로 변환해서 반환
+        return (int) answer;
     }
 }
