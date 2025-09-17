@@ -7,17 +7,19 @@ import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(bf.readLine());
+        int b = Integer.parseInt(bf.readLine());
 
+        Solution solution = new Solution();
+        System.out.println(solution.solution(a, b));
     }
+}
 
-    public static class Solution {
-        public int solution(int n) {
-            int answer = 0;
-            while (n > 0) { // true
-                answer += n % 10; // 23 , 3
-                n /= 10;     // 12     , 2 , 1
-            }
-            return answer;
-        }
+class Solution {
+    public int solution(int num1, int num2) {
+        int answer = 0;
+        answer = num1 / num2;
+        return answer;
     }
 }
