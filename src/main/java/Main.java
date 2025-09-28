@@ -6,22 +6,23 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        int num = Integer.parseInt(bf.readLine());
+        int[] arr = {5,5};
 
         Solution solution = new Solution();
-        System.out.println(solution.solution(num));
+        System.out.println(solution.solution(arr));
     }
 }
 
 class Solution {
-    public String solution(int num) {
-        String answer = "";
+    public double solution(int[] arr) {
+        double answer = 0;
 
-        if (num % 2 == 0) {
-            answer = "Even";
-        } else {
-            answer = "Odd";
+        int result = 0;
+
+        for(int i=0; i<arr.length; i++){
+            result += arr[i];
         }
+        answer = (double) result / arr.length;
 
         return answer;
     }
